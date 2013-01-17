@@ -1,0 +1,129 @@
+/* 
+  Localizable.strings
+  BombaJob
+
+  Created by supudo on 1/11/13.
+  Copyright (c) 2013 supudo.net. All rights reserved.
+*/
+
+"MainNavTitle" = "BombaJob";
+
+"Toolbar.Previous" = "Previous";
+"Toolbar.Previous.Tooltip" = "Previous offer";
+"Toolbar.Next" = "Next";
+"Toolbar.Next.Tooltip" = "Next offer";
+"Toolbar.Refresh" = "Refresh";
+"Toolbar.Refresh.Tooltip" = "Refresh offers";
+"Toolbar.Newest" = "Newest";
+"Toolbar.Newest.Tooltip" = "The newest offers";
+"Toolbar.People" = "People";
+"Toolbar.People.Tooltip" = "Offers from people";
+"Toolbar.Offers" = "Jobs";
+"Toolbar.Offers.Tooltip" = "Offers from companies";
+"Toolbar.Settings" = "Settings";
+"Toolbar.Settings.Tooltip" = "BombaJob settings";
+
+"NewOffers" = "New Offers";
+"NewOffersNew" = "New";
+"NewJobsError" = "Error!";
+"SyncError" = "Error!";
+"SyncError.XMLError" = "Problem with the site...";
+"OfferMessageError" = "Error!";
+"OfferMessageError.EmptyMessage" = "Your message is empty.";
+"Search" = "Search";
+"PostOffer" = "New offer";
+"Jobs" = "Jobs";
+"People" = "People";
+"Offer_IShort_Human" = "H";
+"Offer_IShort_Company" = "C";
+"OfflineMode" = "There is no Internet connection at the moment, entering offline mode.";
+"OfflineMode_NoGeoSearch" = "There is no Internet connection at the moment.";
+"Sync" = "Synchronization";
+"SyncInProgress" = "Synchronizing...";
+"OffersCount" = "Offers";
+"DoFullSync" = "Full data synchronization?";
+
+"Coordinates_Reason" = "For better offer search we need your current location. It's NOT neccessary though.";
+
+"Offer_Freelance" = "Project/Freelance";
+"Offer_Human_Positiv" = "Problem:";
+"Offer_Human_Negativ" = "Skills:";
+"Offer_Company_Positiv" = "Position description:";
+"Offer_Company_Negativ" = "Company traits:";
+"Offer_Category" = "Category:";
+"Offer_Category_Choice" = "- Work at -";
+"Offer_HumanCompany_Choice" = "I am";
+"Offer_HumanCompany_1" = "Human";
+"Offer_HumanCompany_2" = "Company";
+"Offer_Freelance_1" = "Yes";
+"Offer_Freelance_2" = "No";
+"Offer_Title" = "Title:";
+"Offer_Email" = "Your email:";
+"Offer_Boom" = "Boom!";
+"Offer_MissingReqFields" = "Something is missing";
+"Offer_ThankYou" = "Thank You!";
+"Offer_PlaceHolder_Human_Email" = "Your email";
+"Offer_PlaceHolder_Human_Title" = "Resume title";
+"Offer_PlaceHolder_Company_Email" = "Contact email";
+"Offer_PlaceHolder_Company_Title" = "Position title";
+"Offer_EmailSubject" = "BombaJob.bg - message regardig offer #";
+"Offer_EmailSubjectByUser" = "BombaJob.bg - check this offer";
+"Offer_EmailSent" = "Offer was sent.";
+"Offer_EmailEnterYourEmail" = "Your email";
+"Offer_EmailIncorrectEmail" = "Incorrect email.\nPlease, enter correct email.";
+"Offer_SentEmailTo" = "Send to email...";
+"Offer_SentEmailFrom" = "Your email...";
+
+"PostNewJobError_BlackListed" = "Email was blacklisted...";
+"PostNewJobError_OneOfferFromHuman" = "Sorry, but you can only submit one offer for one email address.";
+
+"Settings" = "Settings";
+"About" = "About BombaJob.bg";
+"ExternalURLWarning" = "This action will close the app and will open Safari browser.\nAre you sure?";
+"About.PrivateData" = "Save email";
+"About.Geo" = "Send geo-coordinates";
+"About.Sync" = "Initial Sync";
+"About.Search" = "Online search";
+"About.InAppEmail" = "In-App Email";
+"About.ShowCategories" = "Show categories";
+
+"Search.Search" = "Search";
+"Search.SearchGeo" = "Search around me";
+
+"Search.Freelance" = "Project/Freelance";
+
+"Months_Short_1" = "Jan";
+"Months_Short_2" = "Feb";
+"Months_Short_3" = "Mar";
+"Months_Short_4" = "Apr";
+"Months_Short_5" = "May";
+"Months_Short_6" = "Jun";
+"Months_Short_7" = "Jul";
+"Months_Short_8" = "Aug";
+"Months_Short_9" = "Sep";
+"Months_Short_10" = "Oct";
+"Months_Short_11" = "Nov";
+"Months_Short_12" = "Dec";
+
+"Error.InAppEmailCantSend" = "There is no email account configured on this device.";
+
+"Twitter.LoginError" = "Wrong username and/or password.";
+"Twitter.PublishOK" = "Tweeting was successful.";
+"Twitter.PublishError" = "Error occured while tweeting.";
+"Facebook.PublishOK" = "The offer was posted on your wall.";
+"Facebook.PublishError" = "Error occured while posting on your wall.";
+
+"UI.OK" = "OK";
+"UI.Retry" = "Try again";
+"UI.Cancel" = "Cancel";
+"UI.Close" = "Close";
+"UI.YES.CAPS" = "YES";
+"UI.NO.CAPS" = "NO";
+"UI.YES" = "Yes";
+"UI.NO" = "No";
+"UI.InProgress" = "In progress.";
+"UI.Categories" = "Categories";
+"UI.Offers" = "Offers";
+"UI.RefreshPullDown" = "Pull down to refresh...";
+"UI.RefreshRelease" = "Release to refresh...";
+"UI.RefreshLoading" = "Loading...";
