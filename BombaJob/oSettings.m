@@ -10,7 +10,7 @@
 
 @implementation oSettings
 
-@synthesize inDebugMode;
+@synthesize inDebugMode, totalOffersCount;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 
@@ -33,6 +33,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 - (id)init {
 	if (self = [super init]) {
 		self.inDebugMode = YES;
+        self.totalOffersCount = 0;
     }
 	return self;
 }

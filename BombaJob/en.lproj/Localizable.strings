@@ -32,6 +32,10 @@
 "StatusBar.About" = "About BombaJob";
 "StatusBar.Quit" = "Quit";
 
+"UI.NoOffers" = "No offers!";
+"UI.OfferSmall" = "offer";
+"UI.OffersSmall" = "offers";
+
 "NewOffers" = "New Offers";
 "NewOffersNew" = "New";
 "NewJobsError" = "Error!";

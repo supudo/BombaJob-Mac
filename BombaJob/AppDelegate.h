@@ -11,13 +11,15 @@
 #import "BMToolbar.h"
 #import "BMPathbar.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> 
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 /*
     Properties
  */
 
 @property (assign) IBOutlet NSWindow *window;
+
+@property (assign) IBOutlet NSTextField *cbOfferCount;
 
 // Properties - Database
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

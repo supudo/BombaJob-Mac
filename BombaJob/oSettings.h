@@ -11,9 +11,11 @@
 
 @interface oSettings : NSObject {
     BOOL inDebugMode;
+    int totalOffersCount;
 }
 
 @property BOOL inDebugMode;
+@property int totalOffersCount;
 
 - (void)LogThis:(NSString *)log, ...;
 - (BOOL)connectedToInternet;

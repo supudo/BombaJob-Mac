@@ -9,28 +9,32 @@
 "MainNavTitle" = "BombaJob";
 
 "Toolbar.Previous" = "Предишна";
-"Toolbar.Previous.Tooltip" = "Предишна оферта";
+"Toolbar.Previous.Tooltip" = "Предишна обява";
 "Toolbar.Next" = "Следваща";
-"Toolbar.NextTooltip" = "Следваща оферта";
+"Toolbar.NextTooltip" = "Следваща обява";
 "Toolbar.Refresh" = "Опресни";
-"Toolbar.RefreshTooltip" = "Опресни офертите";
+"Toolbar.RefreshTooltip" = "Опресни обявите";
 "Toolbar.Newest" = "Нови";
-"Toolbar.Newest.Tooltip" = "Най-новите оферти";
+"Toolbar.Newest.Tooltip" = "Най-новите обяви";
 "Toolbar.People" = "Хора";
-"Toolbar.People.Tooltip" = "Оферти от кандидати";
+"Toolbar.People.Tooltip" = "Обяви от кандидати";
 "Toolbar.Offers" = "Работа";
-"Toolbar.Offers.Tooltip" = "Оферти от компании";
+"Toolbar.Offers.Tooltip" = "Обяви от компании";
 "Toolbar.Settings" = "Настройки";
 "Toolbar.Settings.Tooltip" = "BombaJob настройки";
 
 "StatusBar.Show" = "Отвори BombaJob";
 "StatusBar.Newest" = "Най-новите";
 "StatusBar.People" = "Хора";
-"StatusBar.Offers" = "Оферти";
+"StatusBar.Offers" = "Обяви";
 "StatusBar.Settings" = "Настройки";
 "StatusBar.Refresh" = "Опресни";
 "StatusBar.About" = "За BombaJob";
 "StatusBar.Quit" = "Затвори";
+
+"UI.NoOffers" = "Няма обяви!";
+"UI.OfferSmall" = "обява";
+"UI.OffersSmall" = "обяви";
 
 "NewOffers" = "Нови оферти";
 "NewOffersNew" = "Нови";
