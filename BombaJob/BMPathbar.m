@@ -21,28 +21,27 @@
 }
 
 - (void)initPathbar {
-    [pathbar setHidden:YES];
-    [pathbar setAction:@selector(pathbarAction:)];
-    [pathbar setTarget:self];
-    [pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
+    [self.pathbar setAction:@selector(pathbarAction:)];
+    [self.pathbar setTarget:self];
+    [self.pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
 }
 
 #pragma mark -
 #pragma mark System
 
 - (void)removeLastItem {
-    [pathbar removeLastItem];
+    [self.pathbar removeLastItem];
 }
 
 #pragma mark -
 #pragma mark Menu items
 
 - (void)addSync {
-    [pathbar addItemWithTitle:NSLocalizedString(@"SyncInProgress", @"SyncInProgress")];
+    [self.pathbar addItemWithTitle:NSLocalizedString(@"SyncInProgress", @"SyncInProgress")];
 }
 
 - (void)addNewestOffers {
-    [pathbar addItemWithTitle:NSLocalizedString(@"NewOffers", @"NewOffers")];
+    [self.pathbar addItemWithTitle:NSLocalizedString(@"NewOffers", @"NewOffers")];
 }
 
 #pragma mark -

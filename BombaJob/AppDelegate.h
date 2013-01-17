@@ -28,8 +28,8 @@
 
 // Properties - UI
 @property (assign) IBOutlet BMStatusBarMenu *bmStatusbarMenu;
-@property (assign) IBOutlet BMPathbar *bmPathbar;
 @property (assign) IBOutlet BMToolbar *bmToolbar;
+@property (assign) IBOutlet BMPathbar *bmPathbar;
 
 /*
     Methods
@@ -41,5 +41,6 @@
 // Synchronization
 - (void)startSynchronization;
 - (void)stopSynchronization;
+- (void)updateOffersCount;
 
 @end

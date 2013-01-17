@@ -48,6 +48,7 @@
 }
 
 - (void)awakeFromNib {
+    [self setFrame:NSRectFromCGRect(CGRectMake(0, 0, 0, 22))];
     [self pinHeight];
     [self setPathStyle:NSPathStyleNavigationBar];
     [self setFocusRingType:NSFocusRingTypeNone];

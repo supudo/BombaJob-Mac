@@ -39,8 +39,8 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
     NSImage *background = [NSImage imageNamed:@"ITPathbar-fill"];
+    cellFrame.size.height = 22;
     [background drawInRect:cellFrame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:NO];
-    
     [super drawWithFrame:cellFrame inView:controlView];
 }
 
