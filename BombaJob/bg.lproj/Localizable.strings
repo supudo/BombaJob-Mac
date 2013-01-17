@@ -23,6 +23,15 @@
 "Toolbar.Settings" = "Настройки";
 "Toolbar.Settings.Tooltip" = "BombaJob настройки";
 
+"StatusBar.Show" = "Отвори BombaJob";
+"StatusBar.Newest" = "Най-новите";
+"StatusBar.People" = "Хора";
+"StatusBar.Offers" = "Оферти";
+"StatusBar.Settings" = "Настройки";
+"StatusBar.Refresh" = "Опресни";
+"StatusBar.About" = "За BombaJob";
+"StatusBar.Quit" = "Затвори";
+
 "NewOffers" = "Нови оферти";
 "NewOffersNew" = "Нови";
 "NewJobsError" = "Грешка!";

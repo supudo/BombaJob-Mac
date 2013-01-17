@@ -23,6 +23,15 @@
 "Toolbar.Settings" = "Settings";
 "Toolbar.Settings.Tooltip" = "BombaJob settings";
 
+"StatusBar.Show" = "Show BombaJob";
+"StatusBar.Newest" = "Newest";
+"StatusBar.People" = "People";
+"StatusBar.Offers" = "Offers";
+"StatusBar.Settings" = "Settings";
+"StatusBar.Refresh" = "Refresh";
+"StatusBar.About" = "About BombaJob";
+"StatusBar.Quit" = "Quit";
+
 "NewOffers" = "New Offers";
 "NewOffersNew" = "New";
 "NewJobsError" = "Error!";
