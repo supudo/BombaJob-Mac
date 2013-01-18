@@ -17,6 +17,7 @@
 - (IBAction)iboJobs:(id)sender;
 - (IBAction)iboPeople:(id)sender;
 - (IBAction)iboSettings:(id)sender;
+- (IBAction)iboSearch:(id)sender;
 
 - (void)changeViewController:(BMScreen)tag;
 

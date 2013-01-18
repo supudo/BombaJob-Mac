@@ -12,16 +12,19 @@
 @interface oSettings : NSObject {
     BOOL inDebugMode;
     int totalOffersCount;
+    NSString *lastSearchQuery;
 }
 
 @property BOOL inDebugMode;
 @property int totalOffersCount;
+@property (strong) NSString *lastSearchQuery;
 
 typedef enum BMScreen {
     BMScreenNewest = 0,
     BMScreenJobs,
     BMScreenPeople,
-    BMScreenSettings
+    BMScreenSettings,
+    BMScreenSearchResults
 } BMScreen;
 
 - (void)LogThis:(NSString *)log, ...;

@@ -12,12 +12,11 @@
 
 @property (assign) IBOutlet NSToolbarItem *tbPrev, *tbNext, *tbRefresh;
 @property (assign) IBOutlet NSToolbarItem *tbNewest, *tbJobs, *tbPeople, *tbSettings;
-@property (assign) IBOutlet NSToolbarItem *tbSearch;
+@property (assign) IBOutlet NSSearchField *sfSearch;
 
 - (void)initToolbarLabels;
 - (IBAction)iboTbPrevious:(id)sender;
 - (IBAction)iboTbNext:(id)sender;
 - (IBAction)iboTbRefresh:(id)sender;
-- (IBAction)iboTbSearch:(id)sender;
 
 @end

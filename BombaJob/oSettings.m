@@ -10,7 +10,7 @@
 
 @implementation oSettings
 
-@synthesize inDebugMode, totalOffersCount;
+@synthesize inDebugMode, totalOffersCount, lastSearchQuery;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 
@@ -34,6 +34,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 	if (self = [super init]) {
 		self.inDebugMode = YES;
         self.totalOffersCount = 0;
+        self.lastSearchQuery = @"";
     }
 	return self;
 }

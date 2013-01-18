@@ -828,14 +828,14 @@
 							<bool key="NSToolbarIsUserRemovable">YES</bool>
 							<int key="NSToolbarItemVisibilityPriority">0</int>
 						</object>
-						<object class="NSToolbarItem" key="916FE944-B5E9-4384-BB11-DFF9B64E497A" id="304902105">
+						<object class="NSToolbarItem" key="916FE944-B5E9-4384-BB11-DFF9B64E497A" id="19121714">
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
 								<characters key="NS.bytes">916FE944-B5E9-4384-BB11-DFF9B64E497A</characters>
 							</object>
-							<string key="NSToolbarItemLabel">Search</string>
+							<string key="NSToolbarItemLabel"/>
 							<string key="NSToolbarItemPaletteLabel">Search</string>
 							<nil key="NSToolbarItemToolTip"/>
-							<object class="NSSearchField" key="NSToolbarItemView" id="571898692">
+							<object class="NSSearchField" key="NSToolbarItemView" id="690827503">
 								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{0, 14}, {96, 22}}</string>
@@ -843,7 +843,7 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="NSTag">8</int>
 								<bool key="NSEnabled">YES</bool>
-								<object class="NSSearchFieldCell" key="NSCell" id="1047429634">
+								<object class="NSSearchFieldCell" key="NSCell" id="775963937">
 									<int key="NSCellFlags">342884416</int>
 									<int key="NSCellFlags2">268436544</int>
 									<string key="NSContents"/>
@@ -852,8 +852,9 @@
 										<double key="NSSize">13</double>
 										<int key="NSfFlags">1044</int>
 									</object>
+									<string key="NSPlaceholderString">Search</string>
 									<string key="NSCellIdentifier">_NS:9</string>
-									<reference key="NSControlView" ref="571898692"/>
+									<reference key="NSControlView" ref="690827503"/>
 									<bool key="NSDrawsBackground">YES</bool>
 									<int key="NSTextBezelStyle">1</int>
 									<object class="NSColor" key="NSBackgroundColor">
@@ -865,7 +866,7 @@
 											<bytes key="NSWhite">MQA</bytes>
 										</object>
 									</object>
-									<object class="NSColor" key="NSTextColor" id="818811477">
+									<object class="NSColor" key="NSTextColor" id="89716530">
 										<int key="NSColorSpace">6</int>
 										<string key="NSCatalogName">System</string>
 										<string key="NSColorName">controlTextColor</string>
@@ -878,9 +879,9 @@
 										<int key="NSCellFlags">0</int>
 										<int key="NSCellFlags2">0</int>
 										<string key="NSContents">search</string>
-										<reference key="NSControlView" ref="571898692"/>
+										<reference key="NSControlView" ref="690827503"/>
 										<string key="NSAction">_searchFieldSearch:</string>
-										<reference key="NSTarget" ref="1047429634"/>
+										<reference key="NSTarget" ref="775963937"/>
 										<int key="NSButtonFlags">138690560</int>
 										<int key="NSButtonFlags2">0</int>
 										<string key="NSKeyEquivalent"/>
@@ -897,9 +898,9 @@
 												<integer value="1" key="NSAccessibilityEncodedAttributesValueType"/>
 											</dictionary>
 										</array>
-										<reference key="NSControlView" ref="571898692"/>
+										<reference key="NSControlView" ref="690827503"/>
 										<string key="NSAction">_searchFieldCancel:</string>
-										<reference key="NSTarget" ref="1047429634"/>
+										<reference key="NSTarget" ref="775963937"/>
 										<int key="NSButtonFlags">138690560</int>
 										<int key="NSButtonFlags2">0</int>
 										<string key="NSKeyEquivalent"/>
@@ -907,6 +908,7 @@
 										<int key="NSPeriodicInterval">75</int>
 									</object>
 									<int key="NSMaximumRecents">255</int>
+									<bool key="NSSendsWholeSearchString">YES</bool>
 								</object>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							</object>
@@ -1058,7 +1060,7 @@
 						<reference ref="654785793"/>
 						<reference ref="846500484"/>
 						<reference ref="952955363"/>
-						<reference ref="304902105"/>
+						<reference ref="19121714"/>
 					</array>
 					<array key="NSToolbarIBDefaultItems">
 						<reference ref="293874281"/>
@@ -1070,7 +1072,7 @@
 						<reference ref="722366381"/>
 						<reference ref="405793852"/>
 						<reference ref="654785793"/>
-						<reference ref="304902105"/>
+						<reference ref="19121714"/>
 					</array>
 					<array key="NSToolbarIBSelectableItems" id="0"/>
 				</object>
@@ -1111,7 +1113,7 @@
 												<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 											</object>
 										</object>
-										<reference key="NSTextColor" ref="818811477"/>
+										<reference key="NSTextColor" ref="89716530"/>
 									</object>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								</object>
@@ -1123,7 +1125,7 @@
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">ITPathbar</string>
 						</object>
-						<object class="NSCustomView" id="774908700">
+						<object class="NSCustomView" id="40308801">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{0, 20}, {719, 315}}</string>
@@ -1137,7 +1139,7 @@
 					<string key="NSFrameSize">{719, 335}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="774908700"/>
+					<reference key="NSNextKeyView" ref="40308801"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
@@ -1268,7 +1270,7 @@
 			<object class="NSCustomObject" id="1037694184">
 				<string key="NSClassName">BMPathbar</string>
 			</object>
-			<object class="NSCustomObject" id="689102596">
+			<object class="NSCustomObject" id="889597385">
 				<string key="NSClassName">AppController</string>
 			</object>
 		</array>
@@ -1654,7 +1656,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">bmAppController</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="689102596"/>
+						<reference key="destination" ref="889597385"/>
 					</object>
 					<int key="connectionID">913</int>
 				</object>
@@ -1732,27 +1734,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">tbSearch</string>
-						<reference key="source" ref="675939781"/>
-						<reference key="destination" ref="304902105"/>
-					</object>
-					<int key="connectionID">899</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">iboTbSearch:</string>
-						<reference key="source" ref="675939781"/>
-						<reference key="destination" ref="304902105"/>
-					</object>
-					<int key="connectionID">900</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">tbJobs</string>
 						<reference key="source" ref="675939781"/>
 						<reference key="destination" ref="434792344"/>
 					</object>
 					<int key="connectionID">923</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">sfSearch</string>
+						<reference key="source" ref="675939781"/>
+						<reference key="destination" ref="690827503"/>
+					</object>
+					<int key="connectionID">928</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1869,15 +1863,15 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">holderView</string>
-						<reference key="source" ref="689102596"/>
-						<reference key="destination" ref="774908700"/>
+						<reference key="source" ref="889597385"/>
+						<reference key="destination" ref="40308801"/>
 					</object>
 					<int key="connectionID">895</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboNewest:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="688346986"/>
 					</object>
 					<int key="connectionID">914</int>
@@ -1885,7 +1879,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboPeople:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="722366381"/>
 					</object>
 					<int key="connectionID">915</int>
@@ -1893,7 +1887,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboSettings:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="405793852"/>
 					</object>
 					<int key="connectionID">918</int>
@@ -1901,7 +1895,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboNewest:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="51640048"/>
 					</object>
 					<int key="connectionID">919</int>
@@ -1909,7 +1903,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboPeople:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="510721519"/>
 					</object>
 					<int key="connectionID">920</int>
@@ -1917,7 +1911,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboSettings:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="548016575"/>
 					</object>
 					<int key="connectionID">922</int>
@@ -1925,7 +1919,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboJobs:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="434792344"/>
 					</object>
 					<int key="connectionID">924</int>
@@ -1933,10 +1927,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">iboJobs:</string>
-						<reference key="source" ref="689102596"/>
+						<reference key="source" ref="889597385"/>
 						<reference key="destination" ref="85845181"/>
 					</object>
 					<int key="connectionID">926</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">iboSearch:</string>
+						<reference key="source" ref="889597385"/>
+						<reference key="destination" ref="690827503"/>
+					</object>
+					<int key="connectionID">929</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2435,8 +2437,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="484185653">
-								<reference key="firstItem" ref="774908700"/>
+							<object class="IBNSLayoutConstraint" id="969246173">
+								<reference key="firstItem" ref="40308801"/>
 								<int key="firstAttribute">6</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="439893737"/>
@@ -2451,11 +2453,11 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="164699043">
+							<object class="IBNSLayoutConstraint" id="957301980">
 								<reference key="firstItem" ref="439893737"/>
 								<int key="firstAttribute">4</int>
 								<int key="relation">0</int>
-								<reference key="secondItem" ref="774908700"/>
+								<reference key="secondItem" ref="40308801"/>
 								<int key="secondAttribute">4</int>
 								<float key="multiplier">1</float>
 								<object class="IBNSLayoutSymbolicConstant" key="constant">
@@ -2467,8 +2469,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="375541184">
-								<reference key="firstItem" ref="774908700"/>
+							<object class="IBNSLayoutConstraint" id="754645437">
+								<reference key="firstItem" ref="40308801"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="439893737"/>
@@ -2483,8 +2485,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="907009367">
-								<reference key="firstItem" ref="774908700"/>
+							<object class="IBNSLayoutConstraint" id="104270611">
+								<reference key="firstItem" ref="40308801"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="439893737"/>
@@ -2500,7 +2502,7 @@
 								<int key="contentType">3</int>
 							</object>
 							<reference ref="538916239"/>
-							<reference ref="774908700"/>
+							<reference ref="40308801"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2622,7 +2624,7 @@
 							<reference ref="434792344"/>
 							<reference ref="405793852"/>
 							<reference ref="846500484"/>
-							<reference ref="304902105"/>
+							<reference ref="19121714"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2876,53 +2878,53 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">886</int>
-						<reference key="object" ref="774908700"/>
+						<reference key="object" ref="40308801"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">894</int>
-						<reference key="object" ref="689102596"/>
+						<reference key="object" ref="889597385"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">898</int>
-						<reference key="object" ref="304902105"/>
+						<reference key="object" ref="19121714"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="571898692"/>
+							<reference ref="690827503"/>
 						</array>
 						<reference key="parent" ref="378778325"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">896</int>
-						<reference key="object" ref="571898692"/>
+						<reference key="object" ref="690827503"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="1047429634"/>
+							<reference ref="775963937"/>
 						</array>
-						<reference key="parent" ref="304902105"/>
+						<reference key="parent" ref="19121714"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">897</int>
-						<reference key="object" ref="1047429634"/>
-						<reference key="parent" ref="571898692"/>
+						<reference key="object" ref="775963937"/>
+						<reference key="parent" ref="690827503"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">907</int>
-						<reference key="object" ref="907009367"/>
+						<reference key="object" ref="104270611"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">908</int>
-						<reference key="object" ref="375541184"/>
+						<reference key="object" ref="754645437"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">911</int>
-						<reference key="object" ref="164699043"/>
+						<reference key="object" ref="957301980"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">912</int>
-						<reference key="object" ref="484185653"/>
+						<reference key="object" ref="969246173"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</array>
@@ -2986,10 +2988,10 @@
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<array class="NSMutableArray" key="372.IBNSViewMetadataConstraints">
-					<reference ref="907009367"/>
-					<reference ref="375541184"/>
-					<reference ref="164699043"/>
-					<reference ref="484185653"/>
+					<reference ref="104270611"/>
+					<reference ref="754645437"/>
+					<reference ref="957301980"/>
+					<reference ref="969246173"/>
 					<reference ref="817283600"/>
 					<reference ref="631111174"/>
 					<reference ref="903735503"/>
@@ -3091,7 +3093,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">926</int>
+			<int key="maxID">929</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3102,6 +3104,7 @@
 						<string key="iboJobs:">id</string>
 						<string key="iboNewest:">id</string>
 						<string key="iboPeople:">id</string>
+						<string key="iboSearch:">id</string>
 						<string key="iboSettings:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -3115,6 +3118,10 @@
 						</object>
 						<object class="IBActionInfo" key="iboPeople:">
 							<string key="name">iboPeople:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="iboSearch:">
+							<string key="name">iboSearch:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="iboSettings:">
@@ -3309,7 +3316,6 @@
 						<string key="iboTbNext:">id</string>
 						<string key="iboTbPrevious:">id</string>
 						<string key="iboTbRefresh:">id</string>
-						<string key="iboTbSearch:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="iboTbNext:">
@@ -3324,22 +3330,22 @@
 							<string key="name">iboTbRefresh:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="iboTbSearch:">
-							<string key="name">iboTbSearch:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="sfSearch">NSSearchField</string>
 						<string key="tbJobs">NSToolbarItem</string>
 						<string key="tbNewest">NSToolbarItem</string>
 						<string key="tbNext">NSToolbarItem</string>
 						<string key="tbPeople">NSToolbarItem</string>
 						<string key="tbPrev">NSToolbarItem</string>
 						<string key="tbRefresh">NSToolbarItem</string>
-						<string key="tbSearch">NSToolbarItem</string>
 						<string key="tbSettings">NSToolbarItem</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="sfSearch">
+							<string key="name">sfSearch</string>
+							<string key="candidateClassName">NSSearchField</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="tbJobs">
 							<string key="name">tbJobs</string>
 							<string key="candidateClassName">NSToolbarItem</string>
@@ -3362,10 +3368,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="tbRefresh">
 							<string key="name">tbRefresh</string>
-							<string key="candidateClassName">NSToolbarItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tbSearch">
-							<string key="name">tbSearch</string>
 							<string key="candidateClassName">NSToolbarItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="tbSettings">

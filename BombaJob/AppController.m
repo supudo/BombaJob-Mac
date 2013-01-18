@@ -11,6 +11,7 @@
 #import "People.h"
 #import "Jobs.h"
 #import "Settings.h"
+#import "SearchResults.h"
 
 @implementation AppController
 
@@ -33,6 +34,17 @@
     [self changeViewController:BMScreenSettings];
 }
 
+- (IBAction)iboSearch:(id)sender {
+    NSSearchField *sf = (NSSearchField *)sender;
+    NSString *searchQuery = sf.stringValue;
+    [sf setStringValue:@""];
+    if (![searchQuery isEqualTo:@""]) {
+        [[oSettings sharedoSettings] LogThis:@"Toolbar Search ..."];
+        [oSettings sharedoSettings].lastSearchQuery = searchQuery;
+        [self changeViewController:BMScreenSearchResults];
+    }
+}
+
 - (void)changeViewController:(BMScreen)tag {
     [[_bmViewController view] removeFromSuperview];
     switch (tag) {
@@ -48,10 +60,15 @@
         case BMScreenSettings:
             self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
             break;
+        case BMScreenSearchResults:
+            self.bmViewController = [[SearchResults alloc] initWithNibName:@"SearchResults" bundle:nil];
+            break;
     }
     [_holderView addSubview:[_bmViewController view]];
     [[_bmViewController view] setFrame:[_holderView bounds]];
     [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+    if ([self.bmViewController respondsToSelector:@selector(didShow)])
+        [self.bmViewController performSelector:@selector(didShow)];
 }
 
 @end

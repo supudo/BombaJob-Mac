@@ -34,8 +34,8 @@
     self.tbSettings.label = NSLocalizedString(@"Toolbar.Settings", @"Toolbar.Settings");
     self.tbSettings.toolTip = NSLocalizedString(@"Toolbar.Settings.Tooltip", @"Toolbar.Settings.Tooltip");
     
-    self.tbSearch.label = NSLocalizedString(@"Toolbar.Search", @"Toolbar.Search");
-    self.tbSearch.toolTip = NSLocalizedString(@"Toolbar.Search.Tooltip", @"Toolbar.Search.Tooltip");
+    [self.sfSearch.cell setPlaceholderString:NSLocalizedString(@"Toolbar.Search", @"Toolbar.Search")];
+    self.sfSearch.toolTip = NSLocalizedString(@"Toolbar.Search.Tooltip", @"Toolbar.Search.Tooltip");
 }
 
 - (IBAction)iboTbPrevious:(id)sender {
@@ -48,10 +48,6 @@
 
 - (IBAction)iboTbRefresh:(id)sender {
     [[oSettings sharedoSettings] LogThis:@"Toolbar Refresh..."];
-}
-
-- (IBAction)iboTbSearch:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Search ..."];
 }
 
 @end
