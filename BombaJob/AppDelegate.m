@@ -35,7 +35,7 @@
     [self updateOffersCount];
     [self.bmPathbar removeLastItem];
     [self.bmPathbar addNewestOffers];
-    [self.bmAppController changeViewController:BMScreenNewest];
+    [self.bmAppController iboNewest:nil];
 }
 
 - (void)updateOffersCount {

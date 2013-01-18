@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BMToolbar.h"
 
 @interface AppController : NSObject
 
+@property (weak) IBOutlet BMToolbar *bmToolbar;
 @property (weak) IBOutlet NSView *holderView;
 @property (strong) NSViewController *bmViewController;
 

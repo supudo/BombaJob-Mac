@@ -15,22 +15,27 @@
 
 @implementation AppController
 
+@synthesize bmToolbar = _bmToolbar;
 @synthesize holderView = _holderView;
 @synthesize bmViewController = _bmViewController;
 
 - (IBAction)iboNewest:(id)sender {
+    [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Newest"];
     [self changeViewController:BMScreenNewest];
 }
 
 - (IBAction)iboJobs:(id)sender {
+    [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Jobs"];
     [self changeViewController:BMScreenJobs];
 }
 
 - (IBAction)iboPeople:(id)sender {
+    [self.bmToolbar.toolbar setSelectedItemIdentifier:@"People"];
     [self changeViewController:BMScreenPeople];
 }
 
 - (IBAction)iboSettings:(id)sender {
+    [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Settings"];
     [self changeViewController:BMScreenSettings];
 }
 

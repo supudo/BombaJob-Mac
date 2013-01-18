@@ -10,6 +10,7 @@
 
 @interface BMToolbar : NSObject
 
+@property (assign) IBOutlet NSToolbar *toolbar;
 @property (assign) IBOutlet NSToolbarItem *tbPrev, *tbNext, *tbRefresh;
 @property (assign) IBOutlet NSToolbarItem *tbNewest, *tbJobs, *tbPeople, *tbSettings;
 @property (assign) IBOutlet NSSearchField *sfSearch;
