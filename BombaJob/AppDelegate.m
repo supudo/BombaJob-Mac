@@ -21,7 +21,7 @@
     [self.vLoadingOverlay setWantsLayer:YES];
     self.vLoadingOverlay.layer.backgroundColor = [[NSColor blackColor] CGColor];
     self.vLoadingOverlay.layer.opacity = 0.7f;
-
+    
     [self.progressIndicator startAnimation:nil];
     [self.bmStatusbarMenu initStatusbarMenu];
     [self.bmToolbar initToolbarLabels];
@@ -37,7 +37,7 @@
 - (void)startSynchronization {
     [self loadingShow];
     [self.bmPathbar addSync];
-    [self performSelector:@selector(stopSynchronization) withObject:nil afterDelay:2];
+    [self performSelector:@selector(stopSynchronization) withObject:nil afterDelay:3];
 }
 
 - (void)stopSynchronization {
@@ -54,20 +54,25 @@
     //[[[NSApplication sharedApplication] dockTile] setBadgeLabel:[NSString stringWithFormat:@"%i", [oSettings sharedoSettings].totalOffersCount]];
 
     if ([oSettings sharedoSettings].totalOffersCount == 0)
-        self.cbOfferCount.stringValue = NSLocalizedString(@"UI.NoOffers", @"UI.NoOffers");
+        self.txtOfferCount.stringValue = NSLocalizedString(@"UI.NoOffers", @"UI.NoOffers");
     else if ([oSettings sharedoSettings].totalOffersCount == 1)
-        self.cbOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OfferSmall", @"UI.OfferSmall")];
+        self.txtOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OfferSmall", @"UI.OfferSmall")];
     else
-        self.cbOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OffersSmall", @"UI.OffersSmall")];
+        self.txtOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OffersSmall", @"UI.OffersSmall")];
 }
 
 - (void)loadingShow {
     [self.bmToolbar disableAll];
     [self.window.contentView addSubview:self.vLoadingOverlay];
+    [self.txtLoading setHidden:NO];
+    [self.txtLoading setStringValue:NSLocalizedString(@"SyncInProgress", @"SyncInProgress")];
+    [self.txtLoading setFrameOrigin:NSMakePoint(0, 0)];
+    [self.vLoadingOverlay addSubview:self.txtLoading];
 }
 
 - (void)loadingHide {
     [self.bmToolbar enableAll];
+    [self.txtLoading setHidden:YES];
     [self.vLoadingOverlay removeFromSuperview];
 }
 

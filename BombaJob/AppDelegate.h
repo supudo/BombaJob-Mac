@@ -18,8 +18,6 @@
 // ================================================
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
-@property (strong) NSView *vLoadingOverlay;
 
 // Properties - Database
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -27,12 +25,16 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 // Properties - UI
-@property (assign) IBOutlet NSTextField *cbOfferCount;
 @property (assign) IBOutlet BMStatusBarMenu *bmStatusbarMenu;
 @property (assign) IBOutlet BMToolbar *bmToolbar;
 @property (assign) IBOutlet BMPathbar *bmPathbar;
 @property (assign) IBOutlet BMDockMenu *bmDockMenu;
 @property (assign) IBOutlet AppController *bmAppController;
+
+@property (assign) IBOutlet NSTextField *txtOfferCount;
+@property (strong) IBOutlet NSTextField *txtLoading;
+@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
+@property (strong) NSView *vLoadingOverlay;
 
 // ================================================
 
