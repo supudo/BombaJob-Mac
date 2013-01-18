@@ -10,6 +10,9 @@
 
 @implementation BMToolbar
 
+#pragma mark -
+#pragma mark Init
+
 - (id)init {
     self = [super init];
     if (self) {
@@ -38,6 +41,9 @@
     self.sfSearch.toolTip = NSLocalizedString(@"Toolbar.Search.Tooltip", @"Toolbar.Search.Tooltip");
 }
 
+#pragma mark -
+#pragma mark Actions
+
 - (IBAction)iboTbPrevious:(id)sender {
     [[oSettings sharedoSettings] LogThis:@"Toolbar Previous offer..."];
 }
@@ -48,6 +54,42 @@
 
 - (IBAction)iboTbRefresh:(id)sender {
     [[oSettings sharedoSettings] LogThis:@"Toolbar Refresh..."];
+}
+
+#pragma mark -
+#pragma mark Publics
+
+- (void)disableAll {
+    [self.tbPrev setEnabled:NO];
+    [self.tbNext setEnabled:NO];
+    [self.tbRefresh setEnabled:NO];
+
+    [self.tbNewest setEnabled:NO];
+    [self.tbJobs setEnabled:NO];
+    [self.tbPeople setEnabled:NO];
+    [self.tbSettings setEnabled:NO];
+
+    [self.sfSearch setEnabled:NO];
+}
+
+- (void)enableAll {
+    [self.tbPrev setEnabled:YES];
+    [self.tbNext setEnabled:YES];
+    [self.tbRefresh setEnabled:YES];
+    
+    [self.tbNewest setEnabled:YES];
+    [self.tbJobs setEnabled:YES];
+    [self.tbPeople setEnabled:YES];
+    [self.tbSettings setEnabled:YES];
+    
+    [self.sfSearch setEnabled:YES];
+}
+
+#pragma mark -
+#pragma mark Toolbar delegates
+
+- (BOOL)validateToolbarItem:(NSToolbarItem *)theItem {
+    return [theItem isEnabled];
 }
 
 @end

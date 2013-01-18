@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BMToolbar : NSObject
+@interface BMToolbar : NSObject <NSToolbarDelegate>
 
 @property (assign) IBOutlet NSToolbar *toolbar;
 @property (assign) IBOutlet NSToolbarItem *tbPrev, *tbNext, *tbRefresh;
@@ -19,5 +19,8 @@
 - (IBAction)iboTbPrevious:(id)sender;
 - (IBAction)iboTbNext:(id)sender;
 - (IBAction)iboTbRefresh:(id)sender;
+
+- (void)disableAll;
+- (void)enableAll;
 
 @end

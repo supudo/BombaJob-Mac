@@ -18,6 +18,8 @@
 // ================================================
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
+@property (strong) NSView *vLoadingOverlay;
 
 // Properties - Database
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -41,5 +43,7 @@
 - (void)startSynchronization;
 - (void)stopSynchronization;
 - (void)updateOffersCount;
+- (void)loadingShow;
+- (void)loadingHide;
 
 @end
