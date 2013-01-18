@@ -10,6 +10,7 @@
 #import "BMStatusBarMenu.h"
 #import "BMToolbar.h"
 #import "BMPathbar.h"
+#import "BMDockMenu.h"
 #import "AppController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -31,6 +32,7 @@
 @property (assign) IBOutlet BMStatusBarMenu *bmStatusbarMenu;
 @property (assign) IBOutlet BMToolbar *bmToolbar;
 @property (assign) IBOutlet BMPathbar *bmPathbar;
+@property (assign) IBOutlet BMDockMenu *bmDockMenu;
 @property (assign) IBOutlet AppController *bmAppController;
 
 /*

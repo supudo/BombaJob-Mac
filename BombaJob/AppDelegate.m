@@ -39,12 +39,21 @@
 }
 
 - (void)updateOffersCount {
+    //[[[NSApplication sharedApplication] dockTile] setBadgeLabel:[NSString stringWithFormat:@"%i", [oSettings sharedoSettings].totalOffersCount]];
+
     if ([oSettings sharedoSettings].totalOffersCount == 0)
         self.cbOfferCount.stringValue = NSLocalizedString(@"UI.NoOffers", @"UI.NoOffers");
     else if ([oSettings sharedoSettings].totalOffersCount == 1)
         self.cbOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OfferSmall", @"UI.OfferSmall")];
     else
         self.cbOfferCount.stringValue = [NSString stringWithFormat:@"%i %@", [oSettings sharedoSettings].totalOffersCount, NSLocalizedString(@"UI.OffersSmall", @"UI.OffersSmall")];
+}
+
+#pragma mark -
+#pragma mark Dock menu
+
+- (NSMenu *)applicationDockMenu:(NSApplication *)sender {
+    return self.bmDockMenu.dockMenu;
 }
 
 #pragma mark -
