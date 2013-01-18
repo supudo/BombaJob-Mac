@@ -27,12 +27,15 @@
     
     self.tbNewest.label = NSLocalizedString(@"Toolbar.Newest", @"Toolbar.Newest");
     self.tbNewest.toolTip = NSLocalizedString(@"Toolbar.Newest.Tooltip", @"Toolbar.Newest.Tooltip");
+    self.tbJobs.label = NSLocalizedString(@"Toolbar.Jobs", @"Toolbar.Jobs");
+    self.tbJobs.toolTip = NSLocalizedString(@"Toolbar.Jobs.Tooltip", @"Toolbar.Jobs.Tooltip");
     self.tbPeople.label = NSLocalizedString(@"Toolbar.People", @"Toolbar.People");
     self.tbPeople.toolTip = NSLocalizedString(@"Toolbar.People.Tooltip", @"Toolbar.People.Tooltip");
-    self.tbOffers.label = NSLocalizedString(@"Toolbar.Offers", @"Toolbar.Offers");
-    self.tbOffers.toolTip = NSLocalizedString(@"Toolbar.Offers.Tooltip", @"Toolbar.Offers.Tooltip");
     self.tbSettings.label = NSLocalizedString(@"Toolbar.Settings", @"Toolbar.Settings");
     self.tbSettings.toolTip = NSLocalizedString(@"Toolbar.Settings.Tooltip", @"Toolbar.Settings.Tooltip");
+    
+    self.tbSearch.label = NSLocalizedString(@"Toolbar.Search", @"Toolbar.Search");
+    self.tbSearch.toolTip = NSLocalizedString(@"Toolbar.Search.Tooltip", @"Toolbar.Search.Tooltip");
 }
 
 - (IBAction)iboTbPrevious:(id)sender {
@@ -47,20 +50,8 @@
     [[oSettings sharedoSettings] LogThis:@"Toolbar Refresh..."];
 }
 
-- (IBAction)iboTbNewest:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Newest..."];
-}
-
-- (IBAction)iboTbPeople:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar People..."];
-}
-
-- (IBAction)iboTbOffers:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Offers..."];
-}
-
-- (IBAction)iboTbSettings:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Settings ..."];
+- (IBAction)iboTbSearch:(id)sender {
+    [[oSettings sharedoSettings] LogThis:@"Toolbar Search ..."];
 }
 
 @end

@@ -11,15 +11,13 @@
 @interface BMToolbar : NSObject
 
 @property (assign) IBOutlet NSToolbarItem *tbPrev, *tbNext, *tbRefresh;
-@property (assign) IBOutlet NSToolbarItem *tbNewest, *tbPeople, *tbOffers, *tbSettings;
+@property (assign) IBOutlet NSToolbarItem *tbNewest, *tbJobs, *tbPeople, *tbSettings;
+@property (assign) IBOutlet NSToolbarItem *tbSearch;
 
 - (void)initToolbarLabels;
 - (IBAction)iboTbPrevious:(id)sender;
 - (IBAction)iboTbNext:(id)sender;
 - (IBAction)iboTbRefresh:(id)sender;
-- (IBAction)iboTbNewest:(id)sender;
-- (IBAction)iboTbPeople:(id)sender;
-- (IBAction)iboTbOffers:(id)sender;
-- (IBAction)iboTbSettings:(id)sender;
+- (IBAction)iboTbSearch:(id)sender;
 
 @end

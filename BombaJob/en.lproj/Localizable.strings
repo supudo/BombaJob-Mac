@@ -16,17 +16,19 @@
 "Toolbar.Refresh.Tooltip" = "Refresh offers";
 "Toolbar.Newest" = "Newest";
 "Toolbar.Newest.Tooltip" = "The newest offers";
+"Toolbar.Jobs" = "Jobs";
+"Toolbar.Jobs.Tooltip" = "Offers from companies";
 "Toolbar.People" = "People";
-"Toolbar.People.Tooltip" = "Offers from people";
-"Toolbar.Offers" = "Jobs";
-"Toolbar.Offers.Tooltip" = "Offers from companies";
+"Toolbar.People.Tooltip" = "People looking for jobs";
 "Toolbar.Settings" = "Settings";
 "Toolbar.Settings.Tooltip" = "BombaJob settings";
+"Toolbar.Search" = "Search";
+"Toolbar.Search.Tooltip" = "Search in offers";
 
 "StatusBar.Show" = "Show BombaJob";
 "StatusBar.Newest" = "Newest";
+"StatusBar.Jobs" = "Jobs";
 "StatusBar.People" = "People";
-"StatusBar.Offers" = "Offers";
 "StatusBar.Settings" = "Settings";
 "StatusBar.Refresh" = "Refresh";
 "StatusBar.About" = "About BombaJob";

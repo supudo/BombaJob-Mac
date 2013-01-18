@@ -16,17 +16,19 @@
 "Toolbar.RefreshTooltip" = "Опресни обявите";
 "Toolbar.Newest" = "Нови";
 "Toolbar.Newest.Tooltip" = "Най-новите обяви";
+"Toolbar.Jobs" = "Работа";
+"Toolbar.Jobs.Tooltip" = "Обяви от компании";
 "Toolbar.People" = "Хора";
 "Toolbar.People.Tooltip" = "Обяви от кандидати";
-"Toolbar.Offers" = "Работа";
-"Toolbar.Offers.Tooltip" = "Обяви от компании";
 "Toolbar.Settings" = "Настройки";
 "Toolbar.Settings.Tooltip" = "BombaJob настройки";
+"Toolbar.Search" = "Търси";
+"Toolbar.Search.Tooltip" = "Търси в обявите";
 
 "StatusBar.Show" = "Отвори BombaJob";
 "StatusBar.Newest" = "Най-новите";
+"StatusBar.Jobs" = "Работа";
 "StatusBar.People" = "Хора";
-"StatusBar.Offers" = "Обяви";
 "StatusBar.Settings" = "Настройки";
 "StatusBar.Refresh" = "Опресни";
 "StatusBar.About" = "За BombaJob";

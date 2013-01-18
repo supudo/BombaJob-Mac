@@ -30,8 +30,8 @@
     
     [self.itemShowHide setTitle:NSLocalizedString(@"StatusBar.Show", @"StatusBar.Show")];
     [self.itemNewest setTitle:NSLocalizedString(@"StatusBar.Newest", @"StatusBar.Newest")];
+    [self.itemJobs setTitle:NSLocalizedString(@"StatusBar.Jobs", @"StatusBar.Jobs")];
     [self.itemPeople setTitle:NSLocalizedString(@"StatusBar.People", @"StatusBar.People")];
-    [self.itemOffers setTitle:NSLocalizedString(@"StatusBar.Offers", @"StatusBar.Offers")];
     [self.itemSettings setTitle:NSLocalizedString(@"StatusBar.Settings", @"StatusBar.Settings")];
     [self.itemRefresh setTitle:NSLocalizedString(@"StatusBar.Refresh", @"StatusBar.Refresh")];
     [self.itemAbout setTitle:NSLocalizedString(@"StatusBar.About", @"StatusBar.About")];
@@ -44,18 +44,6 @@
 - (IBAction)iboShow:(id)sender {
     [NSApp activateIgnoringOtherApps:YES];
     [[NSApp keyWindow] makeKeyAndOrderFront:nil];
-}
-
-- (IBAction)iboNewest:(id)sender {
-}
-
-- (IBAction)iboPeople:(id)sender {
-}
-
-- (IBAction)iboOffers:(id)sender {
-}
-
-- (IBAction)iboSettings:(id)sender {
 }
 
 - (IBAction)iboAbout:(id)sender {

@@ -17,6 +17,13 @@
 @property BOOL inDebugMode;
 @property int totalOffersCount;
 
+typedef enum BMScreen {
+    BMScreenNewest = 0,
+    BMScreenJobs,
+    BMScreenPeople,
+    BMScreenSettings
+} BMScreen;
+
 - (void)LogThis:(NSString *)log, ...;
 - (BOOL)connectedToInternet;
 - (BOOL)validEmail:(NSString *)email sitrictly:(BOOL)stricterFilter;
