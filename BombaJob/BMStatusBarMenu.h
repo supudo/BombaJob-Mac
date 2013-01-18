@@ -19,7 +19,6 @@
 - (void)initStatusbarMenu;
 
 - (IBAction)iboShow:(id)sender;
-- (IBAction)iboRefresh:(id)sender;
 - (IBAction)iboAbout:(id)sender;
 - (IBAction)iboExit:(id)sender;
 

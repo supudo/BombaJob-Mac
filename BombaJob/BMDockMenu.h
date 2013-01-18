@@ -11,7 +11,7 @@
 @interface BMDockMenu : NSObject
 
 @property (assign) IBOutlet NSMenu *dockMenu;
-@property (assign) IBOutlet NSMenuItem *itemNewest, *itemJobs, *itemPeople, *itemSettings;
+@property (assign) IBOutlet NSMenuItem *itemNewest, *itemJobs, *itemPeople, *itemSettings, *itemRefresh;
 
 - (void)initDockMenu;
 

@@ -25,6 +25,7 @@
     [self.itemJobs setTitle:NSLocalizedString(@"StatusBar.Jobs", @"StatusBar.Jobs")];
     [self.itemPeople setTitle:NSLocalizedString(@"StatusBar.People", @"StatusBar.People")];
     [self.itemSettings setTitle:NSLocalizedString(@"StatusBar.Settings", @"StatusBar.Settings")];
+    [self.itemRefresh setTitle:NSLocalizedString(@"StatusBar.Refresh", @"StatusBar.Refresh")];
 }
 
 @end

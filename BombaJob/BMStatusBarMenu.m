@@ -50,9 +50,6 @@
     [NSApp orderFrontStandardAboutPanel:nil];
 }
 
-- (IBAction)iboRefresh:(id)sender {
-}
-
 - (IBAction)iboExit:(id)sender {
     [NSApp terminate:self];
 }
