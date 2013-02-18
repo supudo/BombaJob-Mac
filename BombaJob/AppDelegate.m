@@ -21,6 +21,11 @@
     [self.vLoadingOverlay setWantsLayer:YES];
     self.vLoadingOverlay.layer.backgroundColor = [[NSColor blackColor] CGColor];
     self.vLoadingOverlay.layer.opacity = 0.7f;
+
+    self.bottomBar.backgroundImage = [NSImage imageNamed:@"ITPathbar-fill.png"];
+    [self.bottomBar drawRect:self.bottomBar.frame];
+    //self.bottomBar drawRect:
+    //[self.bottomBar.layer setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"ITPathbar-fill.png"]]];
     
     [self.progressIndicator startAnimation:nil];
     [self.bmStatusbarMenu initStatusbarMenu];

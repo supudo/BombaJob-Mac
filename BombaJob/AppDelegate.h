@@ -12,6 +12,7 @@
 #import "BMPathbar.h"
 #import "BMDockMenu.h"
 #import "AppController.h"
+#import "PatternView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -31,6 +32,7 @@
 @property (assign) IBOutlet BMDockMenu *bmDockMenu;
 @property (assign) IBOutlet AppController *bmAppController;
 
+@property (strong) IBOutlet PatternView *bottomBar;
 @property (assign) IBOutlet NSTextField *txtOfferCount;
 @property (strong) IBOutlet NSTextField *txtLoading;
 @property (assign) IBOutlet NSProgressIndicator *progressIndicator;

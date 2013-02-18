@@ -45,6 +45,15 @@
                                                      attribute:NSLayoutAttributeNotAnAttribute
                                                     multiplier:1.0f
                                                       constant:self.frame.size.height]];
+    /*
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                     attribute:NSLayoutAttributeHeight
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:nil
+                                                     attribute:NSLayoutAttributeNotAnAttribute
+                                                    multiplier:1.0f
+                                                      constant:self.frame.size.height]];
+     */
 }
 
 - (void)awakeFromNib {

@@ -33,6 +33,7 @@
 		8A7720E616A7FCB900330CD1 /* BMPathbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7720E516A7FCB900330CD1 /* BMPathbar.m */; };
 		8A7720E916A818F400330CD1 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7720E816A818F400330CD1 /* statusbar.png */; };
 		8A7720F616A82B1600330CD1 /* BMStatusBarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7720F516A82B1600330CD1 /* BMStatusBarMenu.m */; };
+		8A94931916D2574B00A0342F /* PatternView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A94931816D2574B00A0342F /* PatternView.m */; };
 		8A98C8AE16A8522E0076423D /* ITPathbar-edge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98C8A016A8522E0076423D /* ITPathbar-edge.png */; };
 		8A98C8AF16A8522E0076423D /* ITPathbar-edge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98C8A116A8522E0076423D /* ITPathbar-edge@2x.png */; };
 		8A98C8B016A8522E0076423D /* ITPathbar-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98C8A216A8522E0076423D /* ITPathbar-fill.png */; };
@@ -107,6 +108,8 @@
 		8A7720E816A818F400330CD1 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
 		8A7720F416A82B1600330CD1 /* BMStatusBarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMStatusBarMenu.h; sourceTree = "<group>"; };
 		8A7720F516A82B1600330CD1 /* BMStatusBarMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMStatusBarMenu.m; sourceTree = "<group>"; };
+		8A94931716D2574B00A0342F /* PatternView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternView.h; sourceTree = "<group>"; };
+		8A94931816D2574B00A0342F /* PatternView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternView.m; sourceTree = "<group>"; };
 		8A98C87616A831570076423D /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = bg; path = bg.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8A98C89A16A852230076423D /* ITPathbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ITPathbar.h; path = ITPathbar/ITPathbar.h; sourceTree = "<group>"; };
 		8A98C89B16A852230076423D /* ITPathbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ITPathbar.m; path = ITPathbar/ITPathbar.m; sourceTree = "<group>"; };
@@ -176,21 +179,8 @@
 		8A100BFC16A956FD0072B135 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8A100C2116A95F740072B135 /* Newest.h */,
-				8A100C2216A95F740072B135 /* Newest.m */,
-				8A100C2316A95F740072B135 /* Newest.xib */,
-				8A100C2616A969AC0072B135 /* Jobs.h */,
-				8A100C2716A969AC0072B135 /* Jobs.m */,
-				8A100C2816A969AC0072B135 /* Jobs.xib */,
-				8A100C0316A957220072B135 /* People.h */,
-				8A100C0416A957220072B135 /* People.m */,
-				8A100C0516A957220072B135 /* People.xib */,
-				8A100C0D16A957390072B135 /* Settings.h */,
-				8A100C0E16A957390072B135 /* Settings.m */,
-				8A100C0F16A957390072B135 /* Settings.xib */,
-				8A100C2F16A972AB0072B135 /* SearchResults.h */,
-				8A100C3016A972AB0072B135 /* SearchResults.m */,
-				8A100C3116A972AB0072B135 /* SearchResults.xib */,
+				8A94931516D256BB00A0342F /* Source */,
+				8A94931616D256C000A0342F /* XIB */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -220,6 +210,35 @@
 				8A98C89F16A852230076423D /* ITPathbarComponentCell.m */,
 			);
 			name = ITPathbar;
+			sourceTree = "<group>";
+		};
+		8A94931516D256BB00A0342F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8A100C2116A95F740072B135 /* Newest.h */,
+				8A100C2216A95F740072B135 /* Newest.m */,
+				8A100C2616A969AC0072B135 /* Jobs.h */,
+				8A100C2716A969AC0072B135 /* Jobs.m */,
+				8A100C0316A957220072B135 /* People.h */,
+				8A100C0416A957220072B135 /* People.m */,
+				8A100C0D16A957390072B135 /* Settings.h */,
+				8A100C0E16A957390072B135 /* Settings.m */,
+				8A100C2F16A972AB0072B135 /* SearchResults.h */,
+				8A100C3016A972AB0072B135 /* SearchResults.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8A94931616D256C000A0342F /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				8A100C2316A95F740072B135 /* Newest.xib */,
+				8A100C2816A969AC0072B135 /* Jobs.xib */,
+				8A100C0516A957220072B135 /* People.xib */,
+				8A100C0F16A957390072B135 /* Settings.xib */,
+				8A100C3116A972AB0072B135 /* SearchResults.xib */,
+			);
+			name = XIB;
 			sourceTree = "<group>";
 		};
 		8AA31B7A16A03F2D005E34C5 = {
@@ -332,6 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				8A7720EA16A82A8400330CD1 /* ITPathbar */,
+				8A94931716D2574B00A0342F /* PatternView.h */,
+				8A94931816D2574B00A0342F /* PatternView.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -523,6 +544,7 @@
 				8A100C2916A969AC0072B135 /* Jobs.m in Sources */,
 				8A100C3216A972AB0072B135 /* SearchResults.m in Sources */,
 				8A100C4216A983A70072B135 /* BMDockMenu.m in Sources */,
+				8A94931916D2574B00A0342F /* PatternView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
