@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "M3NavigationViewControllerProtocol.h"
 
-@interface Newest : NSViewController
+@interface Newest : NSViewController <M3NavigationViewControllerProtocol> 
 
 @end

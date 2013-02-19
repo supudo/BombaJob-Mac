@@ -73,6 +73,7 @@
 		8AA31C1E16A04465005E34C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA31C1D16A04465005E34C5 /* libz.dylib */; };
 		8AA31C2016A04486005E34C5 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA31C1F16A04486005E34C5 /* CoreServices.framework */; };
 		8AC806B216D38E60006D51BA /* BombaJob.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AC806B016D38E60006D51BA /* BombaJob.xcdatamodeld */; };
+		8AC806B716D3A112006D51BA /* M3NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC806B516D3A112006D51BA /* M3NavigationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +177,9 @@
 		8AA31C1D16A04465005E34C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8AA31C1F16A04486005E34C5 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		8AC806B116D38E60006D51BA /* BombaJob.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BombaJob.xcdatamodel; sourceTree = "<group>"; };
+		8AC806B416D3A112006D51BA /* M3NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3NavigationView.h; sourceTree = "<group>"; };
+		8AC806B516D3A112006D51BA /* M3NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3NavigationView.m; sourceTree = "<group>"; };
+		8AC806B616D3A112006D51BA /* M3NavigationViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3NavigationViewControllerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +418,7 @@
 		8AA31BB516A03F7E005E34C5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8AC806B316D3A105006D51BA /* M3NavigationView */,
 				8A7720EA16A82A8400330CD1 /* ITPathbar */,
 				8A94931716D2574B00A0342F /* PatternView.h */,
 				8A94931816D2574B00A0342F /* PatternView.m */,
@@ -488,6 +493,16 @@
 				8AA31BBC16A03FA2005E34C5 /* icon_person.png */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		8AC806B316D3A105006D51BA /* M3NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				8AC806B416D3A112006D51BA /* M3NavigationView.h */,
+				8AC806B516D3A112006D51BA /* M3NavigationView.m */,
+				8AC806B616D3A112006D51BA /* M3NavigationViewControllerProtocol.h */,
+			);
+			name = M3NavigationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,6 +628,7 @@
 				8A94933016D275F700A0342F /* CurrentOffer.m in Sources */,
 				8A94933616D27B0D00A0342F /* oManagedDBContext.m in Sources */,
 				8AC806B216D38E60006D51BA /* BombaJob.xcdatamodeld in Sources */,
+				8AC806B716D3A112006D51BA /* M3NavigationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

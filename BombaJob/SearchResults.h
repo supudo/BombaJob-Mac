@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "M3NavigationViewControllerProtocol.h"
 
-@interface SearchResults : NSViewController
+@interface SearchResults : NSViewController <M3NavigationViewControllerProtocol> 
 
 @property (assign) IBOutlet NSTextField *searchTitle;
 

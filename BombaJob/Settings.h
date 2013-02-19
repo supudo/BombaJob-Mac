@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "M3NavigationViewControllerProtocol.h"
 
-@interface Settings : NSViewController
+@interface Settings : NSViewController <M3NavigationViewControllerProtocol> 
 
 @end

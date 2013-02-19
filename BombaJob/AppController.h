@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "BMToolbar.h"
+#import "M3NavigationView.h"
 
 @interface AppController : NSObject
 
 @property (weak) IBOutlet BMToolbar *bmToolbar;
-@property (weak) IBOutlet NSView *holderView;
-@property (strong) NSViewController *bmViewController;
+@property (weak) IBOutlet M3NavigationView *holderView;
+@property (strong) NSViewController<M3NavigationViewControllerProtocol> *bmViewController;
 
 - (IBAction)iboNewest:(id)sender;
 - (IBAction)iboJobs:(id)sender;
