@@ -15,6 +15,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize vLoadingOverlay = _vLoadingOverlay;
+@synthesize syncer = _syncer;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.vLoadingOverlay = [[NSView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
@@ -24,14 +25,12 @@
 
     self.bottomBar.backgroundImage = [NSImage imageNamed:@"ITPathbar-fill.png"];
     [self.bottomBar drawRect:self.bottomBar.frame];
-    //self.bottomBar drawRect:
-    //[self.bottomBar.layer setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"ITPathbar-fill.png"]]];
     
     [self.progressIndicator startAnimation:nil];
     [self.bmStatusbarMenu initStatusbarMenu];
     [self.bmToolbar initToolbarLabels];
     [self.bmPathbar initPathbar];
-    
+
     [self updateOffersCount];
     [self startSynchronization];
 }
@@ -42,7 +41,18 @@
 - (void)startSynchronization {
     [self loadingShow];
     [self.bmPathbar addSync];
-    [self performSelector:@selector(stopSynchronization) withObject:nil afterDelay:3];
+    if (self.syncer == nil)
+        self.syncer = [[Sync alloc] init];
+    [self.syncer setDelegate:self];
+    [self.syncer startSync:NO];
+}
+
+- (void)syncFinished:(id)sender {
+	[self stopSynchronization];
+}
+
+- (void)syncError:(id)sender error:(NSString *) errorMessage {
+    [[oSettings sharedoSettings] LogThis:@"Sync error - %@", errorMessage];
 }
 
 - (void)stopSynchronization {
@@ -54,6 +64,9 @@
     [self.progressIndicator setHidden:YES];
     [self loadingHide];
 }
+
+#pragma mark -
+#pragma mark DB
 
 - (void)updateOffersCount {
     //[[[NSApplication sharedApplication] dockTile] setBadgeLabel:[NSString stringWithFormat:@"%i", [oSettings sharedoSettings].totalOffersCount]];
@@ -91,25 +104,32 @@
 #pragma mark -
 #pragma mark CoreData
 
-// Returns the directory the application uses to store the Core Data store file.
-// This code uses a directory named "net.supudo.apps.osx.BombaJob" in the user's Application Support directory.
+// Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
+- (void)saveDatabase {
+    NSError *error = nil;
+    
+    if (![[self managedObjectContext] commitEditing])
+        [[oSettings sharedoSettings] LogThis:@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd)];
+    
+    if (![[self managedObjectContext] save:&error])
+        [[NSApplication sharedApplication] presentError:error];
+}
+
 - (NSURL *)applicationFilesDirectory {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"net.supudo.apps.osx.BombaJob"];
+    return [appSupportURL URLByAppendingPathComponent:@"BombaJob"];
 }
 
-// Creates if necessary and returns the managed object model for the application.
 - (NSManagedObjectModel *)managedObjectModel {
     if (_managedObjectModel)
         return _managedObjectModel;
+	
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"BombaJob" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
 
-// Returns the persistent store coordinator for the application. This implementation creates and return a coordinator,
-// having added the store for the application to it. (The directory for the store is created, if necessary.)
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if (_persistentStoreCoordinator)
         return _persistentStoreCoordinator;
@@ -137,13 +157,12 @@
     }
     else {
         if (![properties[NSURLIsDirectoryKey] boolValue]) {
-            // Customize and localize this error.
             NSString *failureDescription = [NSString stringWithFormat:@"Expected a folder to store application data, found a file (%@).", [applicationFilesDirectory path]];
-
+            
             NSMutableDictionary *dict = [NSMutableDictionary dictionary];
             [dict setValue:failureDescription forKey:NSLocalizedDescriptionKey];
             error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:101 userInfo:dict];
-
+            
             [[NSApplication sharedApplication] presentError:error];
             return nil;
         }
@@ -160,7 +179,6 @@
     return _persistentStoreCoordinator;
 }
 
-// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) 
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext)
         return _managedObjectContext;
@@ -176,29 +194,18 @@
     }
     _managedObjectContext = [[NSManagedObjectContext alloc] init];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-
+    
     return _managedObjectContext;
 }
 
-// Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window {
     return [[self managedObjectContext] undoManager];
 }
 
-// Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-- (IBAction)saveAction:(id)sender {
-    NSError *error = nil;
-    
-    if (![[self managedObjectContext] commitEditing])
-        [[oSettings sharedoSettings] LogThis:@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd)];
-    
-    if (![[self managedObjectContext] save:&error])
-        [[NSApplication sharedApplication] presentError:error];
-}
+#pragma mark -
+#pragma mark NSApp specifics
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
-    // Save changes in the application's managed object context before the application terminates.
-    
     if (!_managedObjectContext)
         return NSTerminateNow;
     
@@ -212,12 +219,11 @@
     
     NSError *error = nil;
     if (![[self managedObjectContext] save:&error]) {
-
-        // Customize this code block to include application-specific recovery steps.              
+        
         BOOL result = [sender presentError:error];
         if (result)
             return NSTerminateCancel;
-
+        
         NSString *question = NSLocalizedString(@"Could not save changes while quitting. Quit anyway?", @"Quit without saves error question message");
         NSString *info = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
         NSString *quitButton = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
@@ -227,13 +233,13 @@
         [alert setInformativeText:info];
         [alert addButtonWithTitle:quitButton];
         [alert addButtonWithTitle:cancelButton];
-
+        
         NSInteger answer = [alert runModal];
         
         if (answer == NSAlertAlternateReturn)
             return NSTerminateCancel;
     }
-
+    
     return NSTerminateNow;
 }
 

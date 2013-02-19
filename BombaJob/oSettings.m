@@ -10,7 +10,7 @@
 
 @implementation oSettings
 
-@synthesize inDebugMode, totalOffersCount, lastSearchQuery;
+@synthesize inDebugMode, currentPostOfferResult, totalOffersCount, lastSearchQuery, ServicesURL, currentPostOfferResponse;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 
@@ -33,8 +33,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 - (id)init {
 	if (self = [super init]) {
 		self.inDebugMode = YES;
+        self.currentPostOfferResult = NO;
         self.totalOffersCount = 0;
         self.lastSearchQuery = @"";
+        self.ServicesURL = @"http://www.bombajob.bg/_mob_service.php";
+        self.currentPostOfferResponse = @"";
     }
 	return self;
 }

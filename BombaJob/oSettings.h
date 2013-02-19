@@ -10,14 +10,14 @@
 #import "SynthesizeSingleton.h"
 
 @interface oSettings : NSObject {
-    BOOL inDebugMode;
+    BOOL inDebugMode, currentPostOfferResult, forceSync;
     int totalOffersCount;
-    NSString *lastSearchQuery;
+    NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
 }
 
-@property BOOL inDebugMode;
+@property BOOL inDebugMode, currentPostOfferResult;
 @property int totalOffersCount;
-@property (strong) NSString *lastSearchQuery;
+@property (strong) NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
 
 typedef enum BMScreen {
     BMScreenNewest = 0,

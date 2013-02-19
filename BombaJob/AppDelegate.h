@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "oManagedDBContext.h"
 #import "BMStatusBarMenu.h"
 #import "BMToolbar.h"
 #import "BMPathbar.h"
 #import "BMDockMenu.h"
 #import "AppController.h"
 #import "PatternView.h"
+#import "Sync.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, SyncDelegate>
 
 // ================================================
 
@@ -38,10 +40,12 @@
 @property (assign) IBOutlet NSProgressIndicator *progressIndicator;
 @property (strong) NSView *vLoadingOverlay;
 
+@property (strong) Sync *syncer;
+
 // ================================================
 
 // Database
-- (IBAction)saveAction:(id)sender;
+- (void)saveDatabase;
 
 // Synchronization
 - (void)startSynchronization;
