@@ -22,11 +22,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-// Properties - Database
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 // Properties - UI
 @property (assign) IBOutlet BMStatusBarMenu *bmStatusbarMenu;
 @property (assign) IBOutlet BMToolbar *bmToolbar;
@@ -43,9 +38,6 @@
 @property (strong) Sync *syncer;
 
 // ================================================
-
-// Database
-- (void)saveDatabase;
 
 // Synchronization
 - (void)startSynchronization;

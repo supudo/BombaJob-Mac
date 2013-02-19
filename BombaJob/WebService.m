@@ -288,14 +288,14 @@
 	if ([elementName isEqualToString:@"cat"]) {
 		entCategory = (dbCategory *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"Category" predicateString:[NSString stringWithFormat:@"CategoryID = %@", [attributeDict objectForKey:@"id"]]];
 		if (entCategory == nil)
-			entCategory = (dbCategory *)[NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:[[NSApp delegate] managedObjectContext]];
+			entCategory = (dbCategory *)[NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:[[oManagedDBContext sharedoManagedDBContext] managedObjectContext]];
 		[entCategory setCategoryID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"id"] intValue]]];
 		[entCategory setOffersCount:[NSNumber numberWithInt:[[attributeDict objectForKey:@"cnt"] intValue]]];
 	}
 	else if ([elementName isEqualToString:@"job"]) {
 		entOffer = (dbJobOffer *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"JobOffer" predicateString:[NSString stringWithFormat:@"OfferID = %@", [attributeDict objectForKey:@"id"]]];
 		if (entOffer == nil) {
-			entOffer = (dbJobOffer *)[NSEntityDescription insertNewObjectForEntityForName:@"JobOffer" inManagedObjectContext:[[NSApp delegate] managedObjectContext]];
+			entOffer = (dbJobOffer *)[NSEntityDescription insertNewObjectForEntityForName:@"JobOffer" inManagedObjectContext:[[oManagedDBContext sharedoManagedDBContext] managedObjectContext]];
 			[entOffer setReadYn:[NSNumber numberWithInt:0]];
 			[entOffer setSentMessageYn:[NSNumber numberWithInt:0]];
 		}
@@ -307,7 +307,7 @@
 		[entOffer setCategory:tc];
 	}
 	else if ([elementName isEqualToString:@"tctxt"]) {
-		entTextContent = (dbTextContent *)[NSEntityDescription insertNewObjectForEntityForName:@"TextContent" inManagedObjectContext:[[NSApp delegate] managedObjectContext]];
+		entTextContent = (dbTextContent *)[NSEntityDescription insertNewObjectForEntityForName:@"TextContent" inManagedObjectContext:[[oManagedDBContext sharedoManagedDBContext] managedObjectContext]];
 		[entTextContent setCID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"id"] intValue]]];
 	}
 	else if ([elementName isEqualToString:@"sores"]) {

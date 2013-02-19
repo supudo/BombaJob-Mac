@@ -11,6 +11,10 @@
 
 @interface oManagedDBContext : NSObject
 
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 - (BOOL)save;
 
 - (BOOL)deleteAllObjects:(NSString *)entityName;
