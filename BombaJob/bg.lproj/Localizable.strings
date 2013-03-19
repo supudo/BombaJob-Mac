@@ -26,7 +26,7 @@
 "Toolbar.Search.Tooltip" = "Търси в обявите";
 
 "StatusBar.Show" = "Отвори BombaJob";
-"StatusBar.Newest" = "Най-новите";
+"StatusBar.Newest" = "Най-новите оферти";
 "StatusBar.Jobs" = "Работа";
 "StatusBar.People" = "Хора";
 "StatusBar.Settings" = "Настройки";

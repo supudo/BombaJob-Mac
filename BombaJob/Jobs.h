@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "M3NavigationViewControllerProtocol.h"
 
-@interface Jobs : NSViewController <M3NavigationViewControllerProtocol> 
+@interface Jobs : NSViewController <M3NavigationViewControllerProtocol>
+
+- (void)didShow;
 
 @end

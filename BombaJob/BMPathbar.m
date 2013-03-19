@@ -8,6 +8,11 @@
 
 #import "BMPathbar.h"
 
+@interface BMPathbar ()
+- (void)removeLastItem;
+- (void)addItem:(NSString *)title;
+@end
+
 @implementation BMPathbar
 
 #pragma mark -
@@ -33,15 +38,32 @@
     [self.pathbar removeLastItem];
 }
 
+- (void)addItem:(NSString *)title {
+    [self removeLastItem];
+    [self.pathbar addItemWithTitle:title];
+}
+
 #pragma mark -
 #pragma mark Menu items
 
 - (void)addSync {
-    [self.pathbar addItemWithTitle:NSLocalizedString(@"SyncInProgress", @"SyncInProgress")];
+    [self addItem:NSLocalizedString(@"SyncInProgress", @"SyncInProgress")];
 }
 
 - (void)addNewestOffers {
-    [self.pathbar addItemWithTitle:NSLocalizedString(@"NewOffers", @"NewOffers")];
+    [self addItem:NSLocalizedString(@"StatusBar.Newest", @"StatusBar.Newest")];
+}
+
+- (void)addJobs {
+    [self addItem:NSLocalizedString(@"StatusBar.Jobs", @"StatusBar.Jobs")];
+}
+
+- (void)addPeople {
+    [self addItem:NSLocalizedString(@"StatusBar.People", @"StatusBar.People")];
+}
+
+- (void)addSettings {
+    [self addItem:NSLocalizedString(@"StatusBar.Settings", @"StatusBar.Settings")];
 }
 
 #pragma mark -

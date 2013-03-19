@@ -23,7 +23,8 @@
 	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	[request setValue:@"gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
 	[request setHTTPBody:[pData dataUsingEncoding:NSUTF8StringEncoding]];
-	[[oSettings sharedoSettings] LogThis:@"getFromURL method = %@, postData = %@", pMethod, pData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"getFromURL method = %@, postData = %@", pMethod, pData];
 	
 	NSError *error = nil;
 	NSURLResponse *response;

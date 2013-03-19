@@ -72,7 +72,8 @@
         tagPrev = BMScreenSettings;
     else if ([self.bmViewController isKindOfClass:[SearchResults class]])
         tagPrev = BMScreenSearchResults;
-    else tagPrev = -1;
+    else
+        tagPrev = -1;
 
     if (tag != tagPrev || tagPrev == -1) {
         switch (tag) {

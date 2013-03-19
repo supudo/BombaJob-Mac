@@ -9,7 +9,6 @@
 #import "Newest.h"
 
 @interface Newest ()
-
 @end
 
 @implementation Newest
@@ -19,6 +18,10 @@
     if (self) {
     }
     return self;
+}
+
+- (void)didShow {
+    self.managedObjectContext = [oManagedDBContext sharedoManagedDBContext].managedObjectContext;
 }
 
 @end

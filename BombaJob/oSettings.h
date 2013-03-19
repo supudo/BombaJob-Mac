@@ -10,12 +10,12 @@
 #import "SynthesizeSingleton.h"
 
 @interface oSettings : NSObject {
-    BOOL inDebugMode, currentPostOfferResult, forceSync;
+    BOOL inDebugMode, syncLog, currentPostOfferResult, forceSync;
     int totalOffersCount;
     NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
 }
 
-@property BOOL inDebugMode, currentPostOfferResult;
+@property BOOL inDebugMode, syncLog, currentPostOfferResult, forceSync;
 @property int totalOffersCount;
 @property (strong) NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
 

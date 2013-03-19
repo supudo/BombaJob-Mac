@@ -26,7 +26,7 @@
 "Toolbar.Search.Tooltip" = "Search in offers";
 
 "StatusBar.Show" = "Show BombaJob";
-"StatusBar.Newest" = "Newest";
+"StatusBar.Newest" = "Newest offers";
 "StatusBar.Jobs" = "Jobs";
 "StatusBar.People" = "People";
 "StatusBar.Settings" = "Settings";

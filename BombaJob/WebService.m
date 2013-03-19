@@ -37,7 +37,8 @@
 	[postData appendFormat:@"&neg=%@", offer.Negativism];
 	
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=postNewJob"] postData:postData postMethod:@"POST"];
-	[[oSettings sharedoSettings] LogThis:@"postNewJob response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"postNewJob response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -63,7 +64,8 @@
 	[postData appendFormat:@"&message=%@", msg];
 
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=postMessage"] postData:postData postMethod:@"POST"];
-	[[oSettings sharedoSettings] LogThis:@"postMessage response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"postMessage response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -85,7 +87,8 @@
 		urlReader = [[URLReader alloc] init];
 	[urlReader setDelegate:self];
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=getCategories"] postData:@"" postMethod:@"GET"];
-	[[oSettings sharedoSettings] LogThis:@"getCategories response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"getCategories response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -107,7 +110,8 @@
 		urlReader = [[URLReader alloc] init];
 	[urlReader setDelegate:self];
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=getNewJobs"] postData:@"" postMethod:@"GET"];
-	[[oSettings sharedoSettings] LogThis:@"getNewJobs response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"getNewJobs response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -129,7 +133,8 @@
 		urlReader = [[URLReader alloc] init];
 	[urlReader setDelegate:self];
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=searchJobs"] postData:@"" postMethod:@"GET"];
-	[[oSettings sharedoSettings] LogThis:@"searchJobs response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"searchJobs response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -151,7 +156,8 @@
 		urlReader = [[URLReader alloc] init];
 	[urlReader setDelegate:self];
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=searchPeople"] postData:@"" postMethod:@"GET"];
-	[[oSettings sharedoSettings] LogThis:@"searchPeople response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"searchPeople response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -172,7 +178,8 @@
 		urlReader = [[URLReader alloc] init];
 	[urlReader setDelegate:self];
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=getTextContent"] postData:@"" postMethod:@"GET"];
-	[[oSettings sharedoSettings] LogThis:@"getTextContent response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"getTextContent response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -199,7 +206,8 @@
 	[postData appendFormat:@"&fromemail=%@", fromEmail];
 	
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=sendEmailMessage"] postData:postData postMethod:@"POST"];
-	[[oSettings sharedoSettings] LogThis:@"sendEmailMessage response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"sendEmailMessage response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -225,7 +233,8 @@
 	[postData appendFormat:@"&freelance=%@", ((frl) ? @"true" : @"false")];
 	
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=searchOffers"] postData:postData postMethod:@"POST"];
-	[[oSettings sharedoSettings] LogThis:@"searchOffers response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"searchOffers response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];
@@ -253,7 +262,8 @@
 	[postData appendFormat:@"&y=%1.6f", lon];
 	
 	NSString *xmlData = [urlReader getFromURL:[NSString stringWithFormat:@"%@?%@", [oSettings sharedoSettings].ServicesURL, @"action=geoSearchOffers"] postData:postData postMethod:@"POST"];
-	[[oSettings sharedoSettings] LogThis:@"geoSearchOffers response = %@", xmlData];
+    if ([oSettings sharedoSettings].syncLog)
+        [[oSettings sharedoSettings] LogThis:@"geoSearchOffers response = %@", xmlData];
 	if (xmlData.length > 0) {
 		NSXMLParser *myParser = [[NSXMLParser alloc] initWithData:[xmlData dataUsingEncoding:NSUTF8StringEncoding]];
 		[myParser setDelegate:self];

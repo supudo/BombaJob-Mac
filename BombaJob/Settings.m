@@ -21,4 +21,7 @@
     return self;
 }
 
+- (void)didShow {
+}
+
 @end

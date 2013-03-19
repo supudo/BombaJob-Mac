@@ -46,6 +46,11 @@
 
 - (void)getTextContentFinished:(id)sender {
     if (!self.xmlErrorOccured)
+        [self.webService getNewJobs:doFullSync];
+}
+
+- (void)getNewJobsFinished:(id)sender {
+    if (!self.xmlErrorOccured)
         [self finishSync];
 }
 

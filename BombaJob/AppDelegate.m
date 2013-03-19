@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation AppDelegate
+
 @synthesize vLoadingOverlay = _vLoadingOverlay;
 @synthesize syncer = _syncer;
 
@@ -53,7 +54,6 @@
 
 - (void)stopSynchronization {
     [self updateOffersCount];
-    [self.bmPathbar removeLastItem];
     [self.bmPathbar addNewestOffers];
     [self.bmAppController iboNewest:nil];
     [self.progressIndicator stopAnimation:nil];

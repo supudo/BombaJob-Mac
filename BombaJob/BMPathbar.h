@@ -15,10 +15,12 @@
 @property (assign) IBOutlet ITPathbar *pathbar;
 
 - (void)initPathbar;
-- (void)removeLastItem;
 
 - (void)addSync;
 - (void)addNewestOffers;
+- (void)addJobs;
+- (void)addPeople;
+- (void)addSettings;
 
 - (IBAction)pathbarAction:(id)sender;
 
