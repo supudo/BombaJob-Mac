@@ -41,6 +41,7 @@
 
 // Synchronization
 - (void)startSynchronization;
+- (void)startSynchronizationFull;
 - (void)stopSynchronization;
 - (void)updateOffersCount;
 - (void)loadingShow;

@@ -359,7 +359,7 @@
 			[entOffer setEmail:string];
 		else if ([currentElement isEqualToString:@"jodt"]) {
 			NSDateFormatter *df = [[NSDateFormatter alloc] init];
-			[df setDateFormat:@"dd-mm-yyyy HH:mm:ss"];
+            NSLog(@"%@ - %@", string , [df dateFromString:string]);
 			[entOffer setPublishDate:[df dateFromString:string]];
 		}
 		// Post new job offer

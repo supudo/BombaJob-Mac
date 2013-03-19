@@ -54,6 +54,7 @@
 
 - (IBAction)iboTbRefresh:(id)sender {
     [[oSettings sharedoSettings] LogThis:@"Toolbar Refresh..."];
+    [((AppDelegate *)[NSApp delegate]) startSynchronizationFull];
 }
 
 #pragma mark -

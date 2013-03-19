@@ -27,6 +27,8 @@
     [self.bmStatusbarMenu initStatusbarMenu];
     [self.bmToolbar initToolbarLabels];
     [self.bmPathbar initPathbar];
+    
+    self.bmAppController.bmPathbar = self.bmPathbar;
 
     [self updateOffersCount];
     [self startSynchronization];
@@ -36,6 +38,18 @@
 #pragma mark Synchronization
 
 - (void)startSynchronization {
+    /*
+    [self loadingShow];
+    [self.bmPathbar addSync];
+    if (self.syncer == nil)
+        self.syncer = [[Sync alloc] init];
+    [self.syncer setDelegate:self];
+    [self.syncer startSync:NO];
+     */
+    [self syncFinished:nil];
+}
+
+- (void)startSynchronizationFull {
     [self loadingShow];
     [self.bmPathbar addSync];
     if (self.syncer == nil)
@@ -45,7 +59,7 @@
 }
 
 - (void)syncFinished:(id)sender {
-	[self stopSynchronization];
+    [self performSelector:@selector(stopSynchronization) withObject:nil afterDelay:1];
 }
 
 - (void)syncError:(id)sender error:(NSString *) errorMessage {

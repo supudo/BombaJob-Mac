@@ -74,16 +74,13 @@
 - (void)insertItemWithTitle:(NSString *)title atIndex:(NSInteger)index {
     NSMutableArray *cells = [self mutablePathComponentCells];
     ITPathbarComponentCell *cell = [[ITPathbarComponentCell alloc] initTextCell:title];
-    
     [cells insertObject:cell atIndex:index];
-    
     self.pathComponentCells = cells;
 }
 
 - (void)removeItemAtIndex:(NSInteger)index {
     NSMutableArray *cells = [self mutablePathComponentCells];
     [cells removeObjectAtIndex:index];
-    
     self.pathComponentCells = cells;
 }
 
@@ -93,6 +90,14 @@
 
 - (NSSize)intrinsicContentSize {
     return NSMakeSize(NSViewNoInstrinsicMetric, NSViewNoInstrinsicMetric);
+}
+
+- (void)removeAllItems {
+    [self.pathComponentCells arrayByAddingObject:nil];
+}
+
+- (NSUInteger)itemsCount {
+    return [self.pathComponentCells count];
 }
 
 @end

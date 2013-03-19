@@ -44,5 +44,7 @@
 - (void)addItemWithTitle:(NSString *)title;
 - (void)removeItemAtIndex:(NSInteger)index;
 - (void)removeLastItem;
+- (void)removeAllItems;
+- (NSUInteger)itemsCount;
 
 @end

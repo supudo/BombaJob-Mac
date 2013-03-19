@@ -18,6 +18,7 @@
 @synthesize bmToolbar = _bmToolbar;
 @synthesize holderView = _holderView;
 @synthesize bmViewController = _bmViewController;
+@synthesize bmPathbar;
 
 - (void)push {
 	//SampleViewController *sample = [[SampleViewController alloc] initWithNumber:count];
@@ -29,21 +30,25 @@
 }
 
 - (IBAction)iboNewest:(id)sender {
+    [self.bmPathbar addNewestOffers];
     [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Newest"];
     [self changeViewController:BMScreenNewest];
 }
 
 - (IBAction)iboJobs:(id)sender {
+    [self.bmPathbar addJobs];
     [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Jobs"];
     [self changeViewController:BMScreenJobs];
 }
 
 - (IBAction)iboPeople:(id)sender {
+    [self.bmPathbar addPeople];
     [self.bmToolbar.toolbar setSelectedItemIdentifier:@"People"];
     [self changeViewController:BMScreenPeople];
 }
 
 - (IBAction)iboSettings:(id)sender {
+    [self.bmPathbar addSettings];
     [self.bmToolbar.toolbar setSelectedItemIdentifier:@"Settings"];
     [self changeViewController:BMScreenSettings];
 }

@@ -40,6 +40,8 @@
 
 - (void)addItem:(NSString *)title {
     [self removeLastItem];
+    if ([self.pathbar itemsCount] == 0)
+        [self.pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
     [self.pathbar addItemWithTitle:title];
 }
 

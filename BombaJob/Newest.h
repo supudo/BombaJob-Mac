@@ -13,6 +13,7 @@
 @interface Newest : NSViewController <M3NavigationViewControllerProtocol>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (weak) IBOutlet NSTableView *tblOffers;
 
 - (void)didShow;
 

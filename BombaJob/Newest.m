@@ -13,15 +13,18 @@
 
 @implementation Newest
 
+@synthesize tblOffers;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.managedObjectContext = [oManagedDBContext sharedoManagedDBContext].managedObjectContext;
     }
     return self;
 }
 
 - (void)didShow {
-    self.managedObjectContext = [oManagedDBContext sharedoManagedDBContext].managedObjectContext;
+    [tblOffers setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"PublishDate" ascending:NO]]];
 }
 
 @end
