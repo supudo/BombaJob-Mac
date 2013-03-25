@@ -20,6 +20,7 @@
 		8A100C3316A972AB0072B135 /* SearchResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C3116A972AB0072B135 /* SearchResults.xib */; };
 		8A100C4216A983A70072B135 /* BMDockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C4116A983A60072B135 /* BMDockMenu.m */; };
 		8A100C6716A9A3830072B135 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A100C6616A9A3820072B135 /* QuartzCore.framework */; };
+		8A238E3116FB2F3F0088318B /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A238E3016FB2F3F0088318B /* OfferCell.m */; };
 		8A5D3B8C16A6BED40086498D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B8B16A6BED40086498D /* icon.icns */; };
 		8A5D3BA316A6EBFD0086498D /* tb-newest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B9C16A6EBFD0086498D /* tb-newest.png */; };
 		8A5D3BA416A6EBFD0086498D /* tb-next.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B9D16A6EBFD0086498D /* tb-next.png */; };
@@ -72,6 +73,7 @@
 		8AA31C1C16A04453005E34C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA31C1B16A04453005E34C5 /* SystemConfiguration.framework */; };
 		8AA31C1E16A04465005E34C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA31C1D16A04465005E34C5 /* libz.dylib */; };
 		8AA31C2016A04486005E34C5 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA31C1F16A04486005E34C5 /* CoreServices.framework */; };
+		8AB088F816FC92EE00CBC792 /* NSColor+NSColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB088F716FC92EE00CBC792 /* NSColor+NSColorWithHex.m */; };
 		8AC806B216D38E60006D51BA /* BombaJob.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AC806B016D38E60006D51BA /* BombaJob.xcdatamodeld */; };
 		8AC806B716D3A112006D51BA /* M3NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC806B516D3A112006D51BA /* M3NavigationView.m */; };
 /* End PBXBuildFile section */
@@ -97,6 +99,8 @@
 		8A100C4016A983A50072B135 /* BMDockMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDockMenu.h; sourceTree = "<group>"; };
 		8A100C4116A983A60072B135 /* BMDockMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDockMenu.m; sourceTree = "<group>"; };
 		8A100C6616A9A3820072B135 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8A238E2F16FB2F3F0088318B /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferCell.h; sourceTree = "<group>"; };
+		8A238E3016FB2F3F0088318B /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
 		8A5D3B8B16A6BED40086498D /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../icon.icns; sourceTree = "<group>"; };
 		8A5D3B9C16A6EBFD0086498D /* tb-newest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tb-newest.png"; sourceTree = "<group>"; };
 		8A5D3B9D16A6EBFD0086498D /* tb-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tb-next.png"; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 		8AA31C1B16A04453005E34C5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8AA31C1D16A04465005E34C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8AA31C1F16A04486005E34C5 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		8AB088F616FC92EE00CBC792 /* NSColor+NSColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+NSColorWithHex.h"; sourceTree = "<group>"; };
+		8AB088F716FC92EE00CBC792 /* NSColor+NSColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+NSColorWithHex.m"; sourceTree = "<group>"; };
 		8AC806B116D38E60006D51BA /* BombaJob.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BombaJob.xcdatamodel; sourceTree = "<group>"; };
 		8AC806B416D3A112006D51BA /* M3NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3NavigationView.h; sourceTree = "<group>"; };
 		8AC806B516D3A112006D51BA /* M3NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3NavigationView.m; sourceTree = "<group>"; };
@@ -205,6 +211,15 @@
 				8A94931616D256C000A0342F /* XIB */,
 			);
 			name = Screens;
+			sourceTree = "<group>";
+		};
+		8A238E2E16FB2ED50088318B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A238E2F16FB2F3F0088318B /* OfferCell.h */,
+				8A238E3016FB2F3F0088318B /* OfferCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		8A5D3B8D16A6EB620086498D /* Toolbar */ = {
@@ -418,10 +433,13 @@
 		8AA31BB516A03F7E005E34C5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8A238E2E16FB2ED50088318B /* Cells */,
 				8AC806B316D3A105006D51BA /* M3NavigationView */,
 				8A7720EA16A82A8400330CD1 /* ITPathbar */,
 				8A94931716D2574B00A0342F /* PatternView.h */,
 				8A94931816D2574B00A0342F /* PatternView.m */,
+				8AB088F616FC92EE00CBC792 /* NSColor+NSColorWithHex.h */,
+				8AB088F716FC92EE00CBC792 /* NSColor+NSColorWithHex.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -629,6 +647,8 @@
 				8A94933616D27B0D00A0342F /* oManagedDBContext.m in Sources */,
 				8AC806B216D38E60006D51BA /* BombaJob.xcdatamodeld in Sources */,
 				8AC806B716D3A112006D51BA /* M3NavigationView.m in Sources */,
+				8A238E3116FB2F3F0088318B /* OfferCell.m in Sources */,
+				8AB088F816FC92EE00CBC792 /* NSColor+NSColorWithHex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

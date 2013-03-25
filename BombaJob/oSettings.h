@@ -12,12 +12,14 @@
 @interface oSettings : NSObject {
     BOOL inDebugMode, syncLog, currentPostOfferResult, forceSync;
     int totalOffersCount;
-    NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
+    NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse, *dateFormatList;
+    NSColor *orangeColor;
 }
 
 @property BOOL inDebugMode, syncLog, currentPostOfferResult, forceSync;
 @property int totalOffersCount;
-@property (strong) NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse;
+@property (strong) NSString *lastSearchQuery, *ServicesURL, *currentPostOfferResponse, *dateFormatList;
+@property (strong) NSColor *orangeColor;
 
 typedef enum BMScreen {
     BMScreenNewest = 0,

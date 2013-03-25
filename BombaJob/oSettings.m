@@ -10,9 +10,8 @@
 
 @implementation oSettings
 
-@synthesize inDebugMode, syncLog, currentPostOfferResult, forceSync;
-@synthesize totalOffersCount;
-@synthesize lastSearchQuery, ServicesURL, currentPostOfferResponse;
+@synthesize inDebugMode, syncLog, currentPostOfferResult, forceSync, totalOffersCount;
+@synthesize lastSearchQuery, ServicesURL, currentPostOfferResponse, orangeColor, dateFormatList;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
 
@@ -44,6 +43,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oSettings);
         self.lastSearchQuery = @"";
         self.ServicesURL = @"http://www.bombajob.bg/_mob_service.php";
         self.currentPostOfferResponse = @"";
+        self.dateFormatList = @"HH:mm, dd MMMM";
+        
+        self.orangeColor = [NSColor colorWithCalibratedRed:0.989 green:0.415 blue:0.032 alpha:1.000];
     }
 	return self;
 }
