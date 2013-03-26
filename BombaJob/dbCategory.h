@@ -13,9 +13,9 @@
 
 @interface dbCategory : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * CategoryID;
-@property (nonatomic, retain) NSString * CategoryTitle;
-@property (nonatomic, retain) NSNumber * OffersCount;
+@property (nonatomic, retain) NSNumber * categoryID;
+@property (nonatomic, retain) NSString * categoryTitle;
+@property (nonatomic, retain) NSNumber * offersCount;
 @property (nonatomic, retain) NSSet *offers;
 @end
 

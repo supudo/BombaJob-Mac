@@ -12,9 +12,9 @@
 
 @implementation dbCategory
 
-@dynamic CategoryID;
-@dynamic CategoryTitle;
-@dynamic OffersCount;
+@dynamic categoryID;
+@dynamic categoryTitle;
+@dynamic offersCount;
 @dynamic offers;
 
 @end

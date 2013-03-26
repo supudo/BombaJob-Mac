@@ -59,12 +59,10 @@
 		currentViewController = [viewStack lastObject];
 		[[currentViewController view] setFrameSize:[self bounds].size];
 		
-		if ([currentViewController respondsToSelector:@selector(willStartAnimating)]) {
+		if ([currentViewController respondsToSelector:@selector(willStartAnimating)])
 			[currentViewController willStartAnimating];
-		}
-		if ([prevViewController respondsToSelector:@selector(willStartAnimating)]) {
+		if ([prevViewController respondsToSelector:@selector(willStartAnimating)])
 			[prevViewController willStartAnimating];
-		}
 		
 		[[prevViewController view] setFrameOrigin:viewOrigin];
 		[[currentViewController view] setFrameOrigin:leftOrigin];
@@ -74,9 +72,8 @@
 		[[[prevViewController view] animator] setFrameOrigin:rightOrigin];
 		[[[currentViewController view] animator] setFrameOrigin:viewOrigin];
 		
-		if ([currentViewController respondsToSelector:@selector(activateView)]) {
+		if ([currentViewController respondsToSelector:@selector(activateView)])
 			[currentViewController activateView];
-		}
 		[self setNeedsDisplay:YES];
 	}
 }
@@ -91,12 +88,10 @@
 	
 	[self addAnimationToView:newView];
 	
-	if ([currentViewController respondsToSelector:@selector(willStartAnimating)]) {
+	if ([currentViewController respondsToSelector:@selector(willStartAnimating)])
 		[currentViewController willStartAnimating];
-	}
-	if ([controller respondsToSelector:@selector(willStartAnimating)]) {
+	if ([controller respondsToSelector:@selector(willStartAnimating)])
 		[controller willStartAnimating];
-	}
 	
 	[newView setFrameOrigin:rightOrigin];
 	[self addSubview:[controller view]];
@@ -106,9 +101,8 @@
 	[viewStack addObject:controller];
 	prevViewController = currentViewController;
 	currentViewController = controller;
-	if ([currentViewController respondsToSelector:@selector(activateView)]) {
+	if ([currentViewController respondsToSelector:@selector(activateView)])
 		[currentViewController activateView];
-	}
 	[self setNeedsDisplay:YES];
 }
 
@@ -116,8 +110,6 @@
 	NSView *newView = [controller view];
 	[newView setFrameSize:[self bounds].size];
 	[self addAnimationToView:newView];
-	
-	
 	[viewStack addObject:controller];
 	currentViewController = controller;
 	[self addSubview:newView];
@@ -138,13 +130,10 @@
 	for (NSView *view in array) {
 		[view removeFromSuperview];
 	}
-	
-	if ([currentViewController respondsToSelector:@selector(didFinishAnimating)] && flag) {
+	if ([currentViewController respondsToSelector:@selector(didFinishAnimating)] && flag)
 		[currentViewController didFinishAnimating];
-	}
-	if ([prevViewController respondsToSelector:@selector(didFinishAnimating)] && flag) {
+	if ([prevViewController respondsToSelector:@selector(didFinishAnimating)] && flag)
 		[prevViewController didFinishAnimating];
-	}
 	prevViewController = nil;
 }
 

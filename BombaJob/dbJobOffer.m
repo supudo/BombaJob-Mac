@@ -12,18 +12,19 @@
 
 @implementation dbJobOffer
 
-@dynamic CategoryID;
-@dynamic CategoryTitle;
-@dynamic Email;
-@dynamic FreelanceYn;
-@dynamic HumanYn;
-@dynamic Negativism;
-@dynamic OfferID;
-@dynamic Positivism;
-@dynamic PublishDate;
-@dynamic ReadYn;
-@dynamic SentMessageYn;
-@dynamic Title;
+@dynamic categoryID;
+@dynamic categoryTitle;
+@dynamic email;
+@dynamic freelanceYn;
+@dynamic humanYn;
+@dynamic negativism;
+@dynamic offerID;
+@dynamic positivism;
+@dynamic publishDate;
+@dynamic readYn;
+@dynamic sentMessageYn;
+@dynamic title;
+@dynamic offerIcon;
 @dynamic category;
 
 @end

@@ -68,7 +68,6 @@
 
 - (void)stopSynchronization {
     [self updateOffersCount];
-    [self.bmPathbar addNewestOffers];
     [self.bmAppController iboNewest:nil];
     [self.progressIndicator stopAnimation:nil];
     [self.progressIndicator setHidden:YES];

@@ -8,23 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "ImageToDataTransformer.h"
 
 @class dbCategory;
 
 @interface dbJobOffer : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * CategoryID;
-@property (nonatomic, retain) NSString * CategoryTitle;
-@property (nonatomic, retain) NSString * Email;
-@property (nonatomic, retain) NSNumber * FreelanceYn;
-@property (nonatomic, retain) NSNumber * HumanYn;
-@property (nonatomic, retain) NSString * Negativism;
-@property (nonatomic, retain) NSNumber * OfferID;
-@property (nonatomic, retain) NSString * Positivism;
-@property (nonatomic, retain) NSDate * PublishDate;
-@property (nonatomic, retain) NSNumber * ReadYn;
-@property (nonatomic, retain) NSNumber * SentMessageYn;
-@property (nonatomic, retain) NSString * Title;
+@property (nonatomic, retain) NSNumber * categoryID;
+@property (nonatomic, retain) NSString * categoryTitle;
+@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSNumber * freelanceYn;
+@property (nonatomic, retain) NSNumber * humanYn;
+@property (nonatomic, retain) NSString * negativism;
+@property (nonatomic, retain) NSNumber * offerID;
+@property (nonatomic, retain) NSString * positivism;
+@property (nonatomic, retain) NSDate * publishDate;
+@property (nonatomic, retain) NSNumber * readYn;
+@property (nonatomic, retain) NSNumber * sentMessageYn;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) ImageToDataTransformer * offerIcon;
 @property (nonatomic, retain) dbCategory *category;
 
 @end

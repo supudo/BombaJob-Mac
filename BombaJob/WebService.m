@@ -296,14 +296,14 @@
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
 	currentElement = elementName;
 	if ([elementName isEqualToString:@"cat"]) {
-		entCategory = (dbCategory *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"Category" predicateString:[NSString stringWithFormat:@"CategoryID = %@", [attributeDict objectForKey:@"id"]]];
+		entCategory = (dbCategory *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"Category" predicateString:[NSString stringWithFormat:@"categoryID = %@", [attributeDict objectForKey:@"id"]]];
 		if (entCategory == nil)
 			entCategory = (dbCategory *)[NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:[[oManagedDBContext sharedoManagedDBContext] managedObjectContext]];
 		[entCategory setCategoryID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"id"] intValue]]];
 		[entCategory setOffersCount:[NSNumber numberWithInt:[[attributeDict objectForKey:@"cnt"] intValue]]];
 	}
 	else if ([elementName isEqualToString:@"job"]) {
-		entOffer = (dbJobOffer *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"JobOffer" predicateString:[NSString stringWithFormat:@"OfferID = %@", [attributeDict objectForKey:@"id"]]];
+		entOffer = (dbJobOffer *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"JobOffer" predicateString:[NSString stringWithFormat:@"offerID = %@", [attributeDict objectForKey:@"id"]]];
 		if (entOffer == nil) {
 			entOffer = (dbJobOffer *)[NSEntityDescription insertNewObjectForEntityForName:@"JobOffer" inManagedObjectContext:[[oManagedDBContext sharedoManagedDBContext] managedObjectContext]];
 			[entOffer setReadYn:[NSNumber numberWithInt:0]];
@@ -311,9 +311,14 @@
 		}
 		[entOffer setOfferID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"id"] intValue]]];
 		[entOffer setCategoryID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"cid"] intValue]]];
-		[entOffer setHumanYn:[NSNumber numberWithInt:[[attributeDict objectForKey:@"hm"] intValue]]];
+        int h = [[attributeDict objectForKey:@"hm"] intValue];
+		[entOffer setHumanYn:[NSNumber numberWithInt:h]];
+        if (h == 0)
+            [entOffer setOfferIcon:[NSImage imageNamed:@"icon_person"]];
+        else
+            [entOffer setOfferIcon:[NSImage imageNamed:@"icon_company"]];
 		[entOffer setFreelanceYn:[NSNumber numberWithInt:[[attributeDict objectForKey:@"fyn"] intValue]]];
-		dbCategory *tc = (dbCategory *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"Category" predicateString:[NSString stringWithFormat:@"CategoryID = %@", [attributeDict objectForKey:@"cid"]]];
+		dbCategory *tc = (dbCategory *)[[oManagedDBContext sharedoManagedDBContext] getEntity:@"Category" predicateString:[NSString stringWithFormat:@"categoryID = %@", [attributeDict objectForKey:@"cid"]]];
 		[entOffer setCategory:tc];
 	}
 	else if ([elementName isEqualToString:@"tctxt"]) {

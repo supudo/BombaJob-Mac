@@ -29,14 +29,10 @@
 }
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
-    self.title = jobOffer.Title;
+    self.title = jobOffer.title;
 
     NSRect iconRect = [self iconRectForBounds:cellFrame];
-    NSImage *imgIcon;
-    if ([jobOffer.HumanYn intValue] == 1)
-        imgIcon = [NSImage imageNamed:@"icon_person"];
-    else
-        imgIcon = [NSImage imageNamed:@"icon_company"];
+    NSImage *imgIcon = (NSImage *)jobOffer.offerIcon;
     [imgIcon drawInRect:iconRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:nil];
 
     NSRect titleRect = [self titleRectForBounds:cellFrame];
@@ -98,7 +94,7 @@
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:[oSettings sharedoSettings].dateFormatList];
     [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"bg-BG"]];
-    NSString *publishDate = [df stringFromDate:jobOffer.PublishDate];
+    NSString *publishDate = [df stringFromDate:jobOffer.publishDate];
     NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[oSettings sharedoSettings].orangeColor, NSForegroundColorAttributeName, nil];
     return [[NSAttributedString alloc] initWithString:publishDate attributes:attrs];
 }

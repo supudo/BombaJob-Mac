@@ -214,18 +214,18 @@
 							<array class="NSMutableArray" key="NSArguments">
 								<object class="NSKeyPathSpecifierExpression">
 									<int key="NSExpressionType">10</int>
-									<string key="NSKeyPath">OfferID</string>
+									<string key="NSKeyPath">humanYn</string>
 								</object>
 							</array>
 						</object>
 						<object class="NSConstantValueExpression" key="NSRightExpression">
 							<int key="NSExpressionType">0</int>
-							<integer value="336" key="NSConstantValue"/>
+							<integer value="0" key="NSConstantValue"/>
 						</object>
-						<object class="NSComparisonPredicateOperator" key="NSPredicateOperator">
-							<int key="NSOperatorType">2</int>
+						<object class="NSEqualityPredicateOperator" key="NSPredicateOperator">
+							<int key="NSOperatorType">4</int>
 							<int key="NSModifier">0</int>
-							<int key="NSVariant">2</int>
+							<bool key="NSNegate">NO</bool>
 							<int key="NSOptions">0</int>
 						</object>
 					</object>
@@ -494,7 +494,7 @@
 				<string key="34.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="35.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="36.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="36.ibExternalFetchPredicateFormat">OfferID &gt; 336</string>
+				<string key="36.ibExternalFetchPredicateFormat">humanYn = 0</string>
 				<boolean value="NO" key="9.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>

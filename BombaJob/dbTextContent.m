@@ -11,8 +11,8 @@
 
 @implementation dbTextContent
 
-@dynamic CID;
-@dynamic Content;
-@dynamic Title;
+@dynamic cID;
+@dynamic content;
+@dynamic title;
 
 @end

@@ -133,17 +133,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oManagedDBContext);
             return nil;
         }
     }
-    else {
-        if (![properties[NSURLIsDirectoryKey] boolValue]) {
-            NSString *failureDescription = [NSString stringWithFormat:@"Expected a folder to store application data, found a file (%@).", [applicationFilesDirectory path]];
-            
-            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-            [dict setValue:failureDescription forKey:NSLocalizedDescriptionKey];
-            error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:101 userInfo:dict];
-            
-            [[NSApplication sharedApplication] presentError:error];
-            return nil;
-        }
+    else if (![properties[NSURLIsDirectoryKey] boolValue]) {
+        NSString *failureDescription = [NSString stringWithFormat:@"Expected a folder to store application data, found a file (%@).", [applicationFilesDirectory path]];
+        
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setValue:failureDescription forKey:NSLocalizedDescriptionKey];
+        error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:101 userInfo:dict];
+        
+        [[NSApplication sharedApplication] presentError:error];
+        return nil;
     }
     
     NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"BombaJob.storedata"];

@@ -12,8 +12,8 @@
 
 @interface dbTextContent : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * CID;
-@property (nonatomic, retain) NSString * Content;
-@property (nonatomic, retain) NSString * Title;
+@property (nonatomic, retain) NSNumber * cID;
+@property (nonatomic, retain) NSString * content;
+@property (nonatomic, retain) NSString * title;
 
 @end
