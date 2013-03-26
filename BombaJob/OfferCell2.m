@@ -37,10 +37,10 @@
 	CGFloat detailHeight = nameHeight;
 	NSRect detailFrame = NSMakeRect(detailLeft, detailBottom, detailWidth, detailHeight);
     
-    NSLog(@"CELL ((%1.2f x %1.2f)) = (%1.2f x %1.2f) (%1.2f x %1.2f) - (%1.2f x %1.2f) (%1.2f x %1.2f)",
-          self.bounds.size.width, self.bounds.size.height,
-          nameLeft, nameBottom, nameWidth, nameHeight,
-          detailLeft, detailBottom, detailWidth, detailHeight);
+    //NSLog(@"CELL ((%1.2f x %1.2f)) = (%1.2f x %1.2f) (%1.2f x %1.2f) - (%1.2f x %1.2f) (%1.2f x %1.2f)",
+    //      self.bounds.size.width, self.bounds.size.height,
+    //      nameLeft, nameBottom, nameWidth, nameHeight,
+    //      detailLeft, detailBottom, detailWidth, detailHeight);
 
     [[self.imageView animator] setFrame:iconFrame];
     [[self.textField animator] setFrame:nameFrame];

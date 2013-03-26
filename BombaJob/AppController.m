@@ -7,6 +7,7 @@
 //
 
 #import "AppController.h"
+#import "OffersList.h"
 #import "Newest.h"
 #import "People.h"
 #import "Jobs.h"
@@ -112,6 +113,9 @@
 
     if (tag != tagPrev || tagPrev == -1) {
         switch (tag) {
+            case BMScreenOffersList:
+                self.bmViewController = [[OffersList alloc] initWithNibName:@"OffersList" bundle:nil];
+                break;
             case BMScreenNewest:
                 self.bmViewController = [[Newest alloc] initWithNibName:@"Newest" bundle:nil];
                 break;

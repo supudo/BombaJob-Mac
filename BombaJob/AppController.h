@@ -19,7 +19,6 @@
 @property (strong) NSViewController<M3NavigationViewControllerProtocol> *bmViewController;
 
 - (void)popFromOfferDetails;
-
 - (IBAction)iboNewest:(id)sender;
 - (IBAction)iboJobs:(id)sender;
 - (IBAction)iboPeople:(id)sender;

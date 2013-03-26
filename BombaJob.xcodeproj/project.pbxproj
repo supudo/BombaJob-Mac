@@ -23,6 +23,8 @@
 		8A100C4216A983A70072B135 /* BMDockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C4116A983A60072B135 /* BMDockMenu.m */; };
 		8A100C6716A9A3830072B135 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A100C6616A9A3820072B135 /* QuartzCore.framework */; };
 		8A238E3116FB2F3F0088318B /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A238E3016FB2F3F0088318B /* OfferCell.m */; };
+		8A5A48FA1701EE60000102C5 /* OffersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A48F81701EE60000102C5 /* OffersList.m */; };
+		8A5A48FB1701EE60000102C5 /* OffersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A48F91701EE60000102C5 /* OffersList.xib */; };
 		8A5D3B8C16A6BED40086498D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B8B16A6BED40086498D /* icon.icns */; };
 		8A5D3BA316A6EBFD0086498D /* tb-newest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B9C16A6EBFD0086498D /* tb-newest.png */; };
 		8A5D3BA416A6EBFD0086498D /* tb-next.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D3B9D16A6EBFD0086498D /* tb-next.png */; };
@@ -108,6 +110,9 @@
 		8A100C6616A9A3820072B135 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A238E2F16FB2F3F0088318B /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferCell.h; sourceTree = "<group>"; };
 		8A238E3016FB2F3F0088318B /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
+		8A5A48F71701EE60000102C5 /* OffersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersList.h; sourceTree = "<group>"; };
+		8A5A48F81701EE60000102C5 /* OffersList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersList.m; sourceTree = "<group>"; };
+		8A5A48F91701EE60000102C5 /* OffersList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersList.xib; sourceTree = "<group>"; };
 		8A5D3B8B16A6BED40086498D /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../icon.icns; sourceTree = "<group>"; };
 		8A5D3B9C16A6EBFD0086498D /* tb-newest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tb-newest.png"; sourceTree = "<group>"; };
 		8A5D3B9D16A6EBFD0086498D /* tb-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tb-next.png"; sourceTree = "<group>"; };
@@ -265,6 +270,8 @@
 		8A94931516D256BB00A0342F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8A5A48F71701EE60000102C5 /* OffersList.h */,
+				8A5A48F81701EE60000102C5 /* OffersList.m */,
 				8A100C2116A95F740072B135 /* Newest.h */,
 				8A100C2216A95F740072B135 /* Newest.m */,
 				8A100C2616A969AC0072B135 /* Jobs.h */,
@@ -284,6 +291,7 @@
 		8A94931616D256C000A0342F /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				8A5A48F91701EE60000102C5 /* OffersList.xib */,
 				8A100C2316A95F740072B135 /* Newest.xib */,
 				8A100C2816A969AC0072B135 /* Jobs.xib */,
 				8A100C0516A957220072B135 /* People.xib */,
@@ -628,6 +636,7 @@
 				8A100C2A16A969AC0072B135 /* Jobs.xib in Resources */,
 				8A100C3316A972AB0072B135 /* SearchResults.xib in Resources */,
 				8A00F5641701C85900EB2EFC /* OfferDetails.xib in Resources */,
+				8A5A48FB1701EE60000102C5 /* OffersList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +680,7 @@
 				8A80C74B170073D500DB76F2 /* OfferCell2.m in Sources */,
 				8A80C74E1700823F00DB76F2 /* ImageToDataTransformer.m in Sources */,
 				8A00F5631701C85900EB2EFC /* OfferDetails.m in Sources */,
+				8A5A48FA1701EE60000102C5 /* OffersList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
