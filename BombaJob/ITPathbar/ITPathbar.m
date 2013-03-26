@@ -93,7 +93,10 @@
 }
 
 - (void)removeAllItems {
-    [self.pathComponentCells arrayByAddingObject:nil];
+    while ([self.pathComponentCells count] > 0) {
+        [self removeLastItem];
+    }
+    //[self.pathComponentCells arrayByAddingObject:nil];
 }
 
 - (NSUInteger)itemsCount {

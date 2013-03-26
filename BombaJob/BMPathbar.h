@@ -21,6 +21,8 @@
 - (void)addJobs;
 - (void)addPeople;
 - (void)addSettings;
+- (void)addOfferDetails:(NSString *)title inSection:(int)section;
+- (void)removeLastItem;
 
 - (IBAction)pathbarAction:(id)sender;
 

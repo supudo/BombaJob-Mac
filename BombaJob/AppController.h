@@ -18,12 +18,13 @@
 @property (assign) IBOutlet BMPathbar *bmPathbar;
 @property (strong) NSViewController<M3NavigationViewControllerProtocol> *bmViewController;
 
+- (void)popFromOfferDetails;
+
 - (IBAction)iboNewest:(id)sender;
 - (IBAction)iboJobs:(id)sender;
 - (IBAction)iboPeople:(id)sender;
 - (IBAction)iboSettings:(id)sender;
 - (IBAction)iboSearch:(id)sender;
-
-- (void)changeViewController:(BMScreen)tag;
+- (void)scrOfferDetails:(NSString *)title inSection:(int)section withObject:(id)entity;
 
 @end

@@ -26,7 +26,8 @@ typedef enum BMScreen {
     BMScreenJobs,
     BMScreenPeople,
     BMScreenSettings,
-    BMScreenSearchResults
+    BMScreenSearchResults,
+    BMScreenOfferDetails
 } BMScreen;
 
 - (void)LogThis:(NSString *)log, ...;

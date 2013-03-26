@@ -46,6 +46,7 @@
 
 - (IBAction)iboTbPrevious:(id)sender {
     [[oSettings sharedoSettings] LogThis:@"Toolbar Previous offer..."];
+    [((AppDelegate *)[NSApp delegate]).bmAppController popFromOfferDetails];
 }
 
 - (IBAction)iboTbNext:(id)sender {

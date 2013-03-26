@@ -33,6 +33,7 @@
 "StatusBar.Refresh" = "Опресни";
 "StatusBar.About" = "За BombaJob";
 "StatusBar.Quit" = "Затвори";
+"StatusBar.Search" = "Търсене";
 
 "UI.NoOffers" = "Няма обяви!";
 "UI.OfferSmall" = "обява";

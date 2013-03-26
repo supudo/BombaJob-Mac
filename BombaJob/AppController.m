@@ -12,6 +12,14 @@
 #import "Jobs.h"
 #import "Settings.h"
 #import "SearchResults.h"
+#import "OfferDetails.h"
+
+@interface AppController ()
+@property (strong) id passedObject;
+- (void)changeViewController:(BMScreen)tag;
+- (void)push:(NSViewController<M3NavigationViewControllerProtocol> *)cont;
+- (void)pop;
+@end
 
 @implementation AppController
 
@@ -19,15 +27,26 @@
 @synthesize holderView = _holderView;
 @synthesize bmViewController = _bmViewController;
 @synthesize bmPathbar;
+@synthesize passedObject;
 
-- (void)push {
-	//SampleViewController *sample = [[SampleViewController alloc] initWithNumber:count];
-	//[self.holderView pushViewController:sample];
+#pragma mark -
+#pragma mark Pop & Push
+
+- (void)popFromOfferDetails {
+    [self.bmPathbar removeLastItem];
+    [self pop];
+}
+
+- (void)push:(NSViewController<M3NavigationViewControllerProtocol> *)cont {
+	[self.holderView pushViewController:cont];
 }
 
 - (void)pop {
-	//[self.holderView popViewController];
+	[self.holderView popViewController];
 }
+
+#pragma mark -
+#pragma mark IBO
 
 - (IBAction)iboNewest:(id)sender {
     [self.bmPathbar addNewestOffers];
@@ -64,6 +83,15 @@
     }
 }
 
+- (void)scrOfferDetails:(NSString *)title inSection:(int)section withObject:(id)entity {
+    self.passedObject = entity;
+    [self.bmPathbar addOfferDetails:title inSection:section];
+    [self changeViewController:BMScreenOfferDetails];
+}
+
+#pragma mark -
+#pragma mark System
+
 - (void)changeViewController:(BMScreen)tag {
     BMScreen tagPrev = -1;
 
@@ -77,6 +105,8 @@
         tagPrev = BMScreenSettings;
     else if ([self.bmViewController isKindOfClass:[SearchResults class]])
         tagPrev = BMScreenSearchResults;
+    else if ([self.bmViewController isKindOfClass:[OfferDetails class]])
+        tagPrev = BMScreenOfferDetails;
     else
         tagPrev = -1;
 
@@ -97,44 +127,22 @@
             case BMScreenSearchResults:
                 self.bmViewController = [[SearchResults alloc] initWithNibName:@"SearchResults" bundle:nil];
                 break;
+            case BMScreenOfferDetails:
+                self.bmViewController = [[OfferDetails alloc] initWithNibName:@"OfferDetails" bundle:nil];
+                [self.bmViewController setValue:self.passedObject forKey:@"currentOffer"];
+                break;
         }
 
         if (tagPrev < tag || tagPrev == -1)
-            [self.holderView pushViewController:self.bmViewController];
+            [self push:self.bmViewController];
         else if (tagPrev > tag)
-            [self.holderView popViewController];
+            [self pop];
 
         [[_bmViewController view] setFrame:[_holderView bounds]];
         [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
         if ([self.bmViewController respondsToSelector:@selector(didShow)])
             [self.bmViewController performSelector:@selector(didShow)];
     }
-
-    /*
-    [[_bmViewController view] removeFromSuperview];
-    switch (tag) {
-        case BMScreenNewest:
-            self.bmViewController = [[Newest alloc] initWithNibName:@"Newest" bundle:nil];
-            break;
-        case BMScreenJobs:
-            self.bmViewController = [[Jobs alloc] initWithNibName:@"Jobs" bundle:nil];
-            break;
-        case BMScreenPeople:
-            self.bmViewController = [[People alloc] initWithNibName:@"People" bundle:nil];
-            break;
-        case BMScreenSettings:
-            self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
-            break;
-        case BMScreenSearchResults:
-            self.bmViewController = [[SearchResults alloc] initWithNibName:@"SearchResults" bundle:nil];
-            break;
-    }
-    [_holderView addSubview:[_bmViewController view]];
-    [[_bmViewController view] setFrame:[_holderView bounds]];
-    [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
-    if ([self.bmViewController respondsToSelector:@selector(didShow)])
-        [self.bmViewController performSelector:@selector(didShow)];
-     */
 }
 
 @end

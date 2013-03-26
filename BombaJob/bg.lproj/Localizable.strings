@@ -33,6 +33,7 @@
 "StatusBar.Refresh" = "Refresh";
 "StatusBar.About" = "About BombaJob";
 "StatusBar.Quit" = "Quit";
+"StatusBar.Search" = "Search";
 
 "UI.NoOffers" = "No offers!";
 "UI.OfferSmall" = "offer";

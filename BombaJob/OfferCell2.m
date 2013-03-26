@@ -31,13 +31,17 @@
 	CGFloat nameHeight = 16.0f;
 	NSRect nameFrame = NSMakeRect(nameLeft, nameBottom, nameWidth, nameHeight);
 	
-	CGFloat detailLeft = nameFrame.origin.x + nameFrame.size.width + 5.0f;
-	CGFloat detailBottom = nameFrame.origin.y + nameFrame.size.height - 18.0f;
-	CGFloat detailWidth = self.bounds.size.width - detailLeft - 2.0f;
-	CGFloat detailHeight = 16.0f;
+	CGFloat detailLeft = nameLeft;
+	CGFloat detailBottom = nameFrame.origin.y + nameFrame.size.height + 10.0f;
+	CGFloat detailWidth = nameWidth;
+	CGFloat detailHeight = nameHeight;
 	NSRect detailFrame = NSMakeRect(detailLeft, detailBottom, detailWidth, detailHeight);
-	
-    [[self.detailTextField animator] setAlphaValue:1];
+    
+    NSLog(@"CELL ((%1.2f x %1.2f)) = (%1.2f x %1.2f) (%1.2f x %1.2f) - (%1.2f x %1.2f) (%1.2f x %1.2f)",
+          self.bounds.size.width, self.bounds.size.height,
+          nameLeft, nameBottom, nameWidth, nameHeight,
+          detailLeft, detailBottom, detailWidth, detailHeight);
+
     [[self.imageView animator] setFrame:iconFrame];
     [[self.textField animator] setFrame:nameFrame];
     [[self.detailTextField animator] setFrame:detailFrame];

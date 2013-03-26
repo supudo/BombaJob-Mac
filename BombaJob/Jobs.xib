@@ -95,8 +95,8 @@
 													</object>
 												</object>
 												<object class="NSTextFieldCell" key="NSDataCell" id="750944598">
-													<int key="NSCellFlags">337641472</int>
-													<int key="NSCellFlags2">0</int>
+													<int key="NSCellFlags">338690112</int>
+													<int key="NSCellFlags2">1024</int>
 													<object class="NSFont" key="NSSupport">
 														<string key="NSName">LucidaGrande</string>
 														<double key="NSSize">13</double>
@@ -263,6 +263,14 @@
 						<reference key="destination" ref="255432298"/>
 					</object>
 					<int key="connectionID">73</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">iboViewOffer:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="978705087"/>
+					</object>
+					<int key="connectionID">85</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -502,13 +510,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">83</int>
+			<int key="maxID">85</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">Jobs</string>
 					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">iboViewOffer:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">iboViewOffer:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">iboViewOffer:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="dataController">NSArrayController</string>
 						<string key="tblOffers">NSTableView</string>

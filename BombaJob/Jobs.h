@@ -20,5 +20,6 @@
 @property (weak) IBOutlet NSArrayController *dataController;
 
 - (void)didShow;
+- (IBAction)iboViewOffer:(id)sender;
 
 @end

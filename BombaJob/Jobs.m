@@ -52,4 +52,12 @@
         return [tblOffers rowHeight];
 }
 
+- (IBAction)iboViewOffer:(id)sender {
+    NSInteger selectedRow = [tblOffers selectedRow];
+    if (selectedRow != -1) {
+        dbJobOffer *ent = (dbJobOffer *)[self.dataController.arrangedObjects objectAtIndex:selectedRow];
+        [((AppDelegate *)[NSApp delegate]).bmAppController scrOfferDetails:ent.title inSection:2 withObject:ent];
+    }
+}
+
 @end

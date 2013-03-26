@@ -39,9 +39,13 @@
 }
 
 - (void)addItem:(NSString *)title {
+    /*
     [self removeLastItem];
     if ([self.pathbar itemsCount] == 0)
         [self.pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
+     */
+    [self.pathbar removeAllItems];
+    [self.pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
     [self.pathbar addItemWithTitle:title];
 }
 
@@ -66,6 +70,28 @@
 
 - (void)addSettings {
     [self addItem:NSLocalizedString(@"StatusBar.Settings", @"StatusBar.Settings")];
+}
+
+- (void)addOfferDetails:(NSString *)title inSection:(int)section {
+    [self.pathbar removeAllItems];
+    [self.pathbar addItemWithTitle:NSLocalizedString(@"MainNavTitle", @"MainNavTitle")];
+    switch (section) {
+        case 1:
+            [self.pathbar addItemWithTitle:NSLocalizedString(@"StatusBar.Newest", @"StatusBar.Newest")];
+            break;
+        case 2:
+            [self.pathbar addItemWithTitle:NSLocalizedString(@"StatusBar.Jobs", @"StatusBar.Jobs")];
+            break;
+        case 3:
+            [self.pathbar addItemWithTitle:NSLocalizedString(@"StatusBar.People", @"StatusBar.People")];
+            break;
+        case 4:
+            [self.pathbar addItemWithTitle:NSLocalizedString(@"StatusBar.Search", @"StatusBar.Search")];
+            break;
+        default:
+            break;
+    }
+    [self.pathbar addItemWithTitle:title];
 }
 
 #pragma mark -
