@@ -13,7 +13,8 @@
 @interface OfferDetails : NSViewController <M3NavigationViewControllerProtocol>
 
 @property (strong) dbJobOffer *currentOffer;
-@property (assign) IBOutlet NSTextField *txtTitle;
+@property (assign) IBOutlet NSTextField *txtCategory, *txtTitle, *txtDate;
+@property (assign) IBOutlet NSTextField *txtPositivLabel, *txtPositiv, *txtNegativLabel, *txtNegativ;
 
 - (void)didShow;
 - (void)gotoOlderOffer;

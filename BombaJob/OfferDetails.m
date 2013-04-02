@@ -11,12 +11,13 @@
 #import "dbJobOffer.h"
 
 @interface OfferDetails ()
-
 @end
 
 @implementation OfferDetails
 
-@synthesize txtTitle, currentOffer;
+@synthesize currentOffer;
+@synthesize txtCategory, txtTitle, txtDate;
+@synthesize txtPositivLabel, txtPositiv, txtNegativLabel, txtNegativ;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +27,22 @@
 }
 
 - (void)didShow {
+    [txtCategory setStringValue:currentOffer.categoryTitle];
     [txtTitle setStringValue:currentOffer.title];
+    [txtPositiv setStringValue:currentOffer.positivism];
+    [txtNegativ setStringValue:currentOffer.negativism];
+    if ([self.currentOffer.humanYn boolValue]) {
+        [txtPositivLabel setStringValue:NSLocalizedString(@"Offer_Human_Positiv", @"Offer_Human_Positiv")];
+        [txtNegativLabel setStringValue:NSLocalizedString(@"Offer_Human_Negativ", @"Offer_Human_Negativ")];
+    }
+    else {
+        [txtPositivLabel setStringValue:NSLocalizedString(@"Offer_Company_Positiv", @"Offer_Company_Positiv")];
+        [txtNegativLabel setStringValue:NSLocalizedString(@"Offer_Company_Negativ", @"Offer_Company_Negativ")];
+    }
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"bg"]];
+    [df setDateFormat:@"HH:mm, dd MMM yyyy"];
+    [txtDate setStringValue:[df stringFromDate:self.currentOffer.publishDate]];
 }
 
 - (void)gotoNewerOffer {

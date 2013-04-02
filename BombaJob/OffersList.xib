@@ -98,9 +98,9 @@
 													<int key="NSCellFlags">337641536</int>
 													<int key="NSCellFlags2">2048</int>
 													<object class="NSFont" key="NSSupport">
-														<string key="NSName">LucidaGrande</string>
-														<double key="NSSize">13</double>
-														<int key="NSfFlags">1044</int>
+														<string key="NSName">MyriadPro-Regular</string>
+														<double key="NSSize">16</double>
+														<int key="NSfFlags">16</int>
 													</object>
 													<reference key="NSControlView" ref="265398843"/>
 													<object class="NSColor" key="NSBackgroundColor" id="490974275">
@@ -173,7 +173,6 @@
 								<string key="NSFrame">{{0, 257}, {465, 15}}</string>
 								<reference key="NSSuperview" ref="997746580"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="NSEnabled">YES</bool>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								<int key="NSsFlags">1</int>

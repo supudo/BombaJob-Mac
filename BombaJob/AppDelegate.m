@@ -13,6 +13,7 @@
 
 @synthesize vLoadingOverlay = _vLoadingOverlay;
 @synthesize syncer = _syncer;
+@synthesize txtOfferCount;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.vLoadingOverlay = [[NSView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
@@ -46,6 +47,7 @@
     [self.syncer setDelegate:self];
     [self.syncer startSync:NO];
      */
+    [self updateOffersCount];
     [self syncFinished:nil];
 }
 

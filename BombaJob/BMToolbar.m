@@ -21,10 +21,10 @@
 }
 
 - (void)initToolbarLabels {
-    self.tbPrev.label = NSLocalizedString(@"Toolbar.Previous", @"Toolbar.Previous");
-    self.tbPrev.toolTip = NSLocalizedString(@"Toolbar.Previous.Tooltip", @"Toolbar.Previous.Tooltip");
-    self.tbNext.label = NSLocalizedString(@"Toolbar.Next", @"Toolbar.Next");
-    self.tbNext.toolTip = NSLocalizedString(@"Toolbar.Next.Tooltip", @"Toolbar.Next.Tooltip");
+    self.tbPrev.label = NSLocalizedString(@"Toolbar.Next", @"Toolbar.Next");
+    self.tbPrev.toolTip = NSLocalizedString(@"Toolbar.Next.Tooltip", @"Toolbar.Next.Tooltip");
+    self.tbNext.label = NSLocalizedString(@"Toolbar.Previous", @"Toolbar.Previous");
+    self.tbNext.toolTip = NSLocalizedString(@"Toolbar.Previous.Tooltip", @"Toolbar.Previous.Tooltip");
     self.tbRefresh.label = NSLocalizedString(@"Toolbar.Refresh", @"Toolbar.Refresh");
     self.tbRefresh.toolTip = NSLocalizedString(@"Toolbar.Refresh.Tooltip", @"Toolbar.Refresh.Tooltip");
     
@@ -45,11 +45,11 @@
 #pragma mark Actions
 
 - (IBAction)iboTbPrevious:(id)sender {
-    [((AppDelegate *)[NSApp delegate]).bmAppController gotoOlderOffer];
+    [((AppDelegate *)[NSApp delegate]).bmAppController gotoNewerOffer];
 }
 
 - (IBAction)iboTbNext:(id)sender {
-    [((AppDelegate *)[NSApp delegate]).bmAppController gotoNewerOffer];
+    [((AppDelegate *)[NSApp delegate]).bmAppController gotoOlderOffer];
 }
 
 - (IBAction)iboTbRefresh:(id)sender {

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">3084</string>
@@ -837,9 +837,10 @@
 							<string key="NSToolbarItemPaletteLabel">Search</string>
 							<nil key="NSToolbarItemToolTip"/>
 							<object class="NSSearchField" key="NSToolbarItemView" id="421696785">
-								<nil key="NSNextResponder"/>
+								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{0, 14}, {96, 22}}</string>
+								<reference key="NSSuperview"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="NSTag">8</int>
 								<bool key="NSEnabled">YES</bool>
@@ -1159,17 +1160,16 @@
 									<string key="NSFrame">{{629, 4}, {93, 14}}</string>
 									<reference key="NSSuperview" ref="317391713"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1535</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="478215498">
-										<int key="NSCellFlags">68157504</int>
-										<int key="NSCellFlags2">138544128</int>
+										<int key="NSCellFlags">67108928</int>
+										<int key="NSCellFlags2">138545216</int>
 										<string key="NSContents">138 offers</string>
 										<object class="NSFont" key="NSSupport">
-											<string key="NSName">LucidaGrande</string>
-											<double key="NSSize">11</double>
-											<int key="NSfFlags">3100</int>
+											<string key="NSName">MyriadPro-Regular</string>
+											<double key="NSSize">14</double>
+											<int key="NSfFlags">16</int>
 										</object>
 										<string key="NSCellIdentifier">_NS:1535</string>
 										<reference key="NSControlView" ref="752337310"/>
@@ -1787,19 +1787,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">txtOfferCount</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="752337310"/>
-					</object>
-					<int key="connectionID">1035</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">bottomBar</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="317391713"/>
 					</object>
 					<int key="connectionID">1149</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">txtOfferCount</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="752337310"/>
+					</object>
+					<int key="connectionID">1162</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3684,7 +3684,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1161</int>
+			<int key="maxID">1162</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3721,10 +3721,15 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="bmPathbar">BMPathbar</string>
 						<string key="bmToolbar">BMToolbar</string>
 						<string key="holderView">M3NavigationView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="bmPathbar">
+							<string key="name">bmPathbar</string>
+							<string key="candidateClassName">BMPathbar</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="bmToolbar">
 							<string key="name">bmToolbar</string>
 							<string key="candidateClassName">BMToolbar</string>
