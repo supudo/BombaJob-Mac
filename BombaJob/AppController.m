@@ -8,9 +8,6 @@
 
 #import "AppController.h"
 #import "OffersList.h"
-#import "Newest.h"
-#import "People.h"
-#import "Jobs.h"
 #import "Settings.h"
 #import "SearchResults.h"
 #import "OfferDetails.h"
@@ -140,87 +137,5 @@
     if ([self.bmViewController respondsToSelector:@selector(didShow)])
         [self.bmViewController performSelector:@selector(didShow)];
 }
-
-- (void)changeViewController2:(BMScreen)tag {
-    if (tag == BMScreenNewest || tag == BMScreenJobs || tag == BMScreenPeople || tag == BMScreenSearchResults) {
-        self.bmViewController = [[OffersList alloc] initWithNibName:@"OffersList" bundle:nil];
-        //if (tag == BMScreenNewest)
-        //if (tag == BMScreenJobs)
-        //if (tag == BMScreenPeople)
-        //if (tag == BMScreenSearchResults)
-    }
-    else if (tag == BMScreenSettings) {
-        self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
-    }
-    else if (tag == BMScreenOfferDetails) {
-        self.bmViewController = [[OfferDetails alloc] initWithNibName:@"OfferDetails" bundle:nil];
-        [self.bmViewController setValue:self.passedObject forKey:@"currentOffer"];
-    }
-    
-    [self push:self.bmViewController];
-    
-    [[_bmViewController view] setFrame:[_holderView bounds]];
-    [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
-    if ([self.bmViewController respondsToSelector:@selector(didShow)])
-        [self.bmViewController performSelector:@selector(didShow)];
-}
-
-/*
-- (void)changeViewController:(BMScreen)tag {
-    BMScreen tagPrev = -1;
-
-    if ([self.bmViewController isKindOfClass:[Newest class]])
-        tagPrev = BMScreenNewest;
-    else if ([self.bmViewController isKindOfClass:[Jobs class]])
-        tagPrev = BMScreenJobs;
-    else if ([self.bmViewController isKindOfClass:[People class]])
-        tagPrev = BMScreenPeople;
-    else if ([self.bmViewController isKindOfClass:[Settings class]])
-        tagPrev = BMScreenSettings;
-    else if ([self.bmViewController isKindOfClass:[SearchResults class]])
-        tagPrev = BMScreenSearchResults;
-    else if ([self.bmViewController isKindOfClass:[OfferDetails class]])
-        tagPrev = BMScreenOfferDetails;
-    else
-        tagPrev = -1;
-
-    if (tag != tagPrev || tagPrev == -1) {
-        switch (tag) {
-            case BMScreenOffersList:
-                self.bmViewController = [[OffersList alloc] initWithNibName:@"OffersList" bundle:nil];
-                break;
-            case BMScreenNewest:
-                self.bmViewController = [[Newest alloc] initWithNibName:@"Newest" bundle:nil];
-                break;
-            case BMScreenJobs:
-                self.bmViewController = [[Jobs alloc] initWithNibName:@"Jobs" bundle:nil];
-                break;
-            case BMScreenPeople:
-                self.bmViewController = [[People alloc] initWithNibName:@"People" bundle:nil];
-                break;
-            case BMScreenSettings:
-                self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
-                break;
-            case BMScreenSearchResults:
-                self.bmViewController = [[SearchResults alloc] initWithNibName:@"SearchResults" bundle:nil];
-                break;
-            case BMScreenOfferDetails:
-                self.bmViewController = [[OfferDetails alloc] initWithNibName:@"OfferDetails" bundle:nil];
-                [self.bmViewController setValue:self.passedObject forKey:@"currentOffer"];
-                break;
-        }
-
-        if (tagPrev < tag || tagPrev == -1)
-            [self push:self.bmViewController];
-        else if (tagPrev > tag)
-            [self pop];
-
-        [[_bmViewController view] setFrame:[_holderView bounds]];
-        [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
-        if ([self.bmViewController respondsToSelector:@selector(didShow)])
-            [self.bmViewController performSelector:@selector(didShow)];
-    }
-}
- */
 
 @end

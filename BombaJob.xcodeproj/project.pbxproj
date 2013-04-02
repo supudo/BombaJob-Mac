@@ -9,15 +9,9 @@
 /* Begin PBXBuildFile section */
 		8A00F5631701C85900EB2EFC /* OfferDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F5611701C85900EB2EFC /* OfferDetails.m */; };
 		8A00F5641701C85900EB2EFC /* OfferDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A00F5621701C85900EB2EFC /* OfferDetails.xib */; };
-		8A100C0616A957220072B135 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C0416A957220072B135 /* People.m */; };
-		8A100C0716A957220072B135 /* People.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C0516A957220072B135 /* People.xib */; };
 		8A100C1016A957390072B135 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C0E16A957390072B135 /* Settings.m */; };
 		8A100C1116A957390072B135 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C0F16A957390072B135 /* Settings.xib */; };
 		8A100C1416A958C30072B135 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C1316A958C30072B135 /* AppController.m */; };
-		8A100C2416A95F740072B135 /* Newest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C2216A95F740072B135 /* Newest.m */; };
-		8A100C2516A95F740072B135 /* Newest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C2316A95F740072B135 /* Newest.xib */; };
-		8A100C2916A969AC0072B135 /* Jobs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C2716A969AC0072B135 /* Jobs.m */; };
-		8A100C2A16A969AC0072B135 /* Jobs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C2816A969AC0072B135 /* Jobs.xib */; };
 		8A100C3216A972AB0072B135 /* SearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C3016A972AB0072B135 /* SearchResults.m */; };
 		8A100C3316A972AB0072B135 /* SearchResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A100C3116A972AB0072B135 /* SearchResults.xib */; };
 		8A100C4216A983A70072B135 /* BMDockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A100C4116A983A60072B135 /* BMDockMenu.m */; };
@@ -88,20 +82,11 @@
 		8A00F5601701C85900EB2EFC /* OfferDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetails.h; sourceTree = "<group>"; };
 		8A00F5611701C85900EB2EFC /* OfferDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetails.m; sourceTree = "<group>"; };
 		8A00F5621701C85900EB2EFC /* OfferDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetails.xib; sourceTree = "<group>"; };
-		8A100C0316A957220072B135 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
-		8A100C0416A957220072B135 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
-		8A100C0516A957220072B135 /* People.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = People.xib; sourceTree = "<group>"; };
 		8A100C0D16A957390072B135 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8A100C0E16A957390072B135 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		8A100C0F16A957390072B135 /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		8A100C1216A958C30072B135 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		8A100C1316A958C30072B135 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		8A100C2116A95F740072B135 /* Newest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newest.h; sourceTree = "<group>"; };
-		8A100C2216A95F740072B135 /* Newest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newest.m; sourceTree = "<group>"; };
-		8A100C2316A95F740072B135 /* Newest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Newest.xib; sourceTree = "<group>"; };
-		8A100C2616A969AC0072B135 /* Jobs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jobs.h; sourceTree = "<group>"; };
-		8A100C2716A969AC0072B135 /* Jobs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jobs.m; sourceTree = "<group>"; };
-		8A100C2816A969AC0072B135 /* Jobs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Jobs.xib; sourceTree = "<group>"; };
 		8A100C2F16A972AB0072B135 /* SearchResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResults.h; sourceTree = "<group>"; };
 		8A100C3016A972AB0072B135 /* SearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResults.m; sourceTree = "<group>"; };
 		8A100C3116A972AB0072B135 /* SearchResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResults.xib; sourceTree = "<group>"; };
@@ -272,12 +257,6 @@
 			children = (
 				8A5A48F71701EE60000102C5 /* OffersList.h */,
 				8A5A48F81701EE60000102C5 /* OffersList.m */,
-				8A100C2116A95F740072B135 /* Newest.h */,
-				8A100C2216A95F740072B135 /* Newest.m */,
-				8A100C2616A969AC0072B135 /* Jobs.h */,
-				8A100C2716A969AC0072B135 /* Jobs.m */,
-				8A100C0316A957220072B135 /* People.h */,
-				8A100C0416A957220072B135 /* People.m */,
 				8A100C0D16A957390072B135 /* Settings.h */,
 				8A100C0E16A957390072B135 /* Settings.m */,
 				8A100C2F16A972AB0072B135 /* SearchResults.h */,
@@ -292,9 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				8A5A48F91701EE60000102C5 /* OffersList.xib */,
-				8A100C2316A95F740072B135 /* Newest.xib */,
-				8A100C2816A969AC0072B135 /* Jobs.xib */,
-				8A100C0516A957220072B135 /* People.xib */,
 				8A100C0F16A957390072B135 /* Settings.xib */,
 				8A100C3116A972AB0072B135 /* SearchResults.xib */,
 				8A00F5621701C85900EB2EFC /* OfferDetails.xib */,
@@ -630,10 +606,7 @@
 				8A98C8B916A8522E0076423D /* ITPathbar-highlight@2x.png in Resources */,
 				8A98C8BA16A8522E0076423D /* ITPathbar-separator.png in Resources */,
 				8A98C8BB16A8522E0076423D /* ITPathbar-separator@2x.png in Resources */,
-				8A100C0716A957220072B135 /* People.xib in Resources */,
 				8A100C1116A957390072B135 /* Settings.xib in Resources */,
-				8A100C2516A95F740072B135 /* Newest.xib in Resources */,
-				8A100C2A16A969AC0072B135 /* Jobs.xib in Resources */,
 				8A100C3316A972AB0072B135 /* SearchResults.xib in Resources */,
 				8A00F5641701C85900EB2EFC /* OfferDetails.xib in Resources */,
 				8A5A48FB1701EE60000102C5 /* OffersList.xib in Resources */,
@@ -659,11 +632,8 @@
 				8A98C8BC16A852550076423D /* ITPathbar.m in Sources */,
 				8A98C8BD16A852570076423D /* ITPathbarCell.m in Sources */,
 				8A98C8BE16A852590076423D /* ITPathbarComponentCell.m in Sources */,
-				8A100C0616A957220072B135 /* People.m in Sources */,
 				8A100C1016A957390072B135 /* Settings.m in Sources */,
 				8A100C1416A958C30072B135 /* AppController.m in Sources */,
-				8A100C2416A95F740072B135 /* Newest.m in Sources */,
-				8A100C2916A969AC0072B135 /* Jobs.m in Sources */,
 				8A100C3216A972AB0072B135 /* SearchResults.m in Sources */,
 				8A100C4216A983A70072B135 /* BMDockMenu.m in Sources */,
 				8A94931916D2574B00A0342F /* PatternView.m in Sources */,
