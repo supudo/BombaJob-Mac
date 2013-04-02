@@ -90,6 +90,34 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(oManagedDBContext);
 		return nil;
 }
 
+- (NSManagedObject *)getNewerOffer:(NSPredicate *)predicate {
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	[fetchRequest setEntity:[NSEntityDescription entityForName:@"JobOffer" inManagedObjectContext:self.managedObjectContext]];
+	[fetchRequest setPredicate:predicate];
+    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"offerID" ascending:YES]]];
+    [fetchRequest setFetchLimit:1];
+	NSError *error = nil;
+	NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+	if ([items count] > 0)
+		return [items objectAtIndex:0];
+	else
+		return nil;
+}
+
+- (NSManagedObject *)getOlderOffer:(NSPredicate *)predicate {
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	[fetchRequest setEntity:[NSEntityDescription entityForName:@"JobOffer" inManagedObjectContext:self.managedObjectContext]];
+	[fetchRequest setPredicate:predicate];
+    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"offerID" ascending:NO]]];
+    [fetchRequest setFetchLimit:1];
+	NSError *error = nil;
+	NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+	if ([items count] > 0)
+		return [items objectAtIndex:0];
+	else
+		return nil;
+}
+
 #pragma mark -
 #pragma mark CoreData
 

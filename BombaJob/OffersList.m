@@ -29,7 +29,17 @@
 }
 
 - (void)didShow {
-    [dataController setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"PublishDate" ascending:NO]]];
+    [dataController setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"publishDate" ascending:NO]]];
+    switch (((AppDelegate *)[NSApp delegate]).bmAppController.currentScreen) {
+        case BMScreenJobs:
+            [dataController setFetchPredicate:[NSPredicate predicateWithFormat:@"humanYn = 0"]];
+            break;
+        case BMScreenPeople:
+            [dataController setFetchPredicate:[NSPredicate predicateWithFormat:@"humanYn = 1"]];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {

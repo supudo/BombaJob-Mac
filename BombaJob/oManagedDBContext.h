@@ -22,6 +22,8 @@
 
 - (NSManagedObject *)getEntity:(NSString *)entityName predicateString:(NSString *)predicateString;
 - (NSManagedObject *)getEntity:(NSString *)entityName predicate:(NSPredicate *)predicate;
+- (NSManagedObject *)getNewerOffer:(NSPredicate *)predicate;
+- (NSManagedObject *)getOlderOffer:(NSPredicate *)predicate;
 
 + (oManagedDBContext *)sharedoManagedDBContext;
 

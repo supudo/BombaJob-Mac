@@ -8,10 +8,10 @@
 
 "MainNavTitle" = "BombaJob";
 
-"Toolbar.Previous" = "Previous";
-"Toolbar.Previous.Tooltip" = "Previous offer";
-"Toolbar.Next" = "Next";
-"Toolbar.Next.Tooltip" = "Next offer";
+"Toolbar.Previous" = "Older";
+"Toolbar.Previous.Tooltip" = "Older offer";
+"Toolbar.Next" = "Newer";
+"Toolbar.Next.Tooltip" = "Newer offer";
 "Toolbar.Refresh" = "Refresh";
 "Toolbar.Refresh.Tooltip" = "Refresh offers";
 "Toolbar.Newest" = "Newest";

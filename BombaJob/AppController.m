@@ -17,6 +17,8 @@
 
 @interface AppController ()
 @property (strong) id passedObject;
+@property BOOL inOfferDetails;
+
 - (void)changeViewController:(BMScreen)tag;
 - (void)push:(NSViewController<M3NavigationViewControllerProtocol> *)cont;
 - (void)pop;
@@ -44,6 +46,19 @@
 
 - (void)pop {
 	[self.holderView popViewController];
+}
+
+#pragma mark -
+#pragma mark Prev & Next offers
+
+- (void)gotoOlderOffer {
+    if (self.inOfferDetails && [self.bmViewController respondsToSelector:@selector(gotoOlderOffer)])
+        [self.bmViewController performSelector:@selector(gotoOlderOffer)];
+}
+
+- (void)gotoNewerOffer {
+    if (self.inOfferDetails && [self.bmViewController respondsToSelector:@selector(gotoNewerOffer)])
+        [self.bmViewController performSelector:@selector(gotoNewerOffer)];
 }
 
 #pragma mark -
@@ -93,6 +108,64 @@
 #pragma mark -
 #pragma mark System
 
+- (void)changeViewController:(BMScreen)tag {
+    BOOL shouldPush = NO;
+    self.inOfferDetails = NO;
+
+    if (tag == BMScreenNewest || tag == BMScreenJobs || tag == BMScreenPeople || tag == BMScreenSearchResults) {
+        if (self.currentScreen != tag) {
+            shouldPush = YES;
+            self.bmViewController = [[OffersList alloc] initWithNibName:@"OffersList" bundle:nil];
+        }
+    }
+    else if (tag == BMScreenSettings) {
+        shouldPush = YES;
+        self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
+    }
+    else if (tag == BMScreenOfferDetails) {
+        shouldPush = YES;
+        self.inOfferDetails = YES;
+        self.bmViewController = [[OfferDetails alloc] initWithNibName:@"OfferDetails" bundle:nil];
+        [self.bmViewController setValue:self.passedObject forKey:@"currentOffer"];
+    }
+
+    if (shouldPush) {
+        self.previousScreen = self.currentScreen;
+        self.currentScreen = tag;
+        [self push:self.bmViewController];
+        [[_bmViewController view] setFrame:[_holderView bounds]];
+        [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+    }
+
+    if ([self.bmViewController respondsToSelector:@selector(didShow)])
+        [self.bmViewController performSelector:@selector(didShow)];
+}
+
+- (void)changeViewController2:(BMScreen)tag {
+    if (tag == BMScreenNewest || tag == BMScreenJobs || tag == BMScreenPeople || tag == BMScreenSearchResults) {
+        self.bmViewController = [[OffersList alloc] initWithNibName:@"OffersList" bundle:nil];
+        //if (tag == BMScreenNewest)
+        //if (tag == BMScreenJobs)
+        //if (tag == BMScreenPeople)
+        //if (tag == BMScreenSearchResults)
+    }
+    else if (tag == BMScreenSettings) {
+        self.bmViewController = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
+    }
+    else if (tag == BMScreenOfferDetails) {
+        self.bmViewController = [[OfferDetails alloc] initWithNibName:@"OfferDetails" bundle:nil];
+        [self.bmViewController setValue:self.passedObject forKey:@"currentOffer"];
+    }
+    
+    [self push:self.bmViewController];
+    
+    [[_bmViewController view] setFrame:[_holderView bounds]];
+    [[_bmViewController view] setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+    if ([self.bmViewController respondsToSelector:@selector(didShow)])
+        [self.bmViewController performSelector:@selector(didShow)];
+}
+
+/*
 - (void)changeViewController:(BMScreen)tag {
     BMScreen tagPrev = -1;
 
@@ -148,5 +221,6 @@
             [self.bmViewController performSelector:@selector(didShow)];
     }
 }
+ */
 
 @end

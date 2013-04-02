@@ -8,10 +8,10 @@
 
 "MainNavTitle" = "BombaJob";
 
-"Toolbar.Previous" = "Предишна";
-"Toolbar.Previous.Tooltip" = "Предишна обява";
-"Toolbar.Next" = "Следваща";
-"Toolbar.NextTooltip" = "Следваща обява";
+"Toolbar.Previous" = "По-стара";
+"Toolbar.Previous.Tooltip" = "По-стара обява";
+"Toolbar.Next" = "По-нова";
+"Toolbar.NextTooltip" = "По-нова обява";
 "Toolbar.Refresh" = "Опресни";
 "Toolbar.RefreshTooltip" = "Опресни обявите";
 "Toolbar.Newest" = "Нови";

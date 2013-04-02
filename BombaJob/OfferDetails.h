@@ -16,5 +16,7 @@
 @property (assign) IBOutlet NSTextField *txtTitle;
 
 - (void)didShow;
+- (void)gotoOlderOffer;
+- (void)gotoNewerOffer;
 
 @end

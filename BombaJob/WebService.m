@@ -313,7 +313,7 @@
 		[entOffer setCategoryID:[NSNumber numberWithInt:[[attributeDict objectForKey:@"cid"] intValue]]];
         int h = [[attributeDict objectForKey:@"hm"] intValue];
 		[entOffer setHumanYn:[NSNumber numberWithInt:h]];
-        if (h == 0)
+        if (h == 1)
             [entOffer setOfferIcon:[NSImage imageNamed:@"icon_person"]];
         else
             [entOffer setOfferIcon:[NSImage imageNamed:@"icon_company"]];

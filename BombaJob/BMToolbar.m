@@ -45,12 +45,11 @@
 #pragma mark Actions
 
 - (IBAction)iboTbPrevious:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Previous offer..."];
-    [((AppDelegate *)[NSApp delegate]).bmAppController popFromOfferDetails];
+    [((AppDelegate *)[NSApp delegate]).bmAppController gotoOlderOffer];
 }
 
 - (IBAction)iboTbNext:(id)sender {
-    [[oSettings sharedoSettings] LogThis:@"Toolbar Next offer..."];
+    [((AppDelegate *)[NSApp delegate]).bmAppController gotoNewerOffer];
 }
 
 - (IBAction)iboTbRefresh:(id)sender {

@@ -22,7 +22,8 @@
 @property (strong) NSColor *orangeColor;
 
 typedef enum BMScreen {
-    BMScreenOffersList = 0,
+    BMScreenSync = 0,
+    BMScreenOffersList,
     BMScreenNewest,
     BMScreenJobs,
     BMScreenPeople,

@@ -17,6 +17,7 @@
 @property (weak) IBOutlet M3NavigationView *holderView;
 @property (assign) IBOutlet BMPathbar *bmPathbar;
 @property (strong) NSViewController<M3NavigationViewControllerProtocol> *bmViewController;
+@property BMScreen previousScreen, currentScreen;
 
 - (void)popFromOfferDetails;
 - (IBAction)iboNewest:(id)sender;
@@ -25,5 +26,7 @@
 - (IBAction)iboSettings:(id)sender;
 - (IBAction)iboSearch:(id)sender;
 - (void)scrOfferDetails:(NSString *)title inSection:(int)section withObject:(id)entity;
+- (void)gotoOlderOffer;
+- (void)gotoNewerOffer;
 
 @end
